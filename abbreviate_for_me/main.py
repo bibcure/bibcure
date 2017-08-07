@@ -28,11 +28,11 @@ def get_status(bib):
     if len(a_journal) > 0:
         # pdb.set_trace()
         bib["_text"] = a_journal[0]["abbrev"]
-        bib["_type"] = "abreviated"
+        bib["_type"] = "expanded"
     elif len(a_abbrev) > 0:
         # pdb.set_trace()
         bib["_text"] = a_abbrev[0]["name"]
-        bib["_type"] = "expanded"
+        bib["_type"] = "abreviated"
     return bib
 
 
@@ -51,30 +51,30 @@ def manual_update(bibs):
         return manual_update(bibs)
 
 
-def manual_update_out(bibs):
-    actions = {
-        "y": lambda: update_bibs(bibs, custom=True),
-        "n": lambda: bibs,
-    }
-    question = "Replace '{}' ? y(yes)/n(no): "
-    question = question.format(bibs[0]["journal"])
-    action = raw_input(question)
+# def manual_update_out(bibs):
+    # actions = {
+        # "y": lambda: update_bibs(bibs, custom=True),
+        # "n": lambda: bibs,
+    # }
+    # question = "Replace '{}' ? y(yes)/n(no): "
+    # question = question.format(bibs[0]["journal"])
+    # action = raw_input(question)
+    # # try:
     # try:
-    try:
-        return actions.get(action)()
-    except TypeError:
-        return manual_update_out(bibs)
+        # return actions.get(action)()
+    # except TypeError:
+        # return manual_update_out(bibs)
 
 
-def update_bibs_out(bibs):
+def manual_update_out(bibs):
     is_abreviation = raw_input(
         "'{}' is a abreviation?y(yes)n(no): ".format(bibs[0]["journal"])
     )
     if is_abreviation == "y":
-        full_name = raw_input("Insert journal name: ")
+        full_name = raw_input("Insert journal name:\n")
         abreviation = bibs[0]["journal"]
     elif is_abreviation == "n":
-        abreviation = raw_input("Insert abreviation: ")
+        abreviation = raw_input("Insert abreviation:\n")
         full_name = bibs[0]["journal"]
     else:
         return update_bibs_out(bibs)
@@ -84,9 +84,27 @@ def update_bibs_out(bibs):
     return bibs
 
 
+def update_bibs_out(grouped_bibs):
+    print "\nThe next items does not exist in database."
+    action = raw_input("Manually update your database?y(yes)/n(do nothing)")
+    if action == "n":
+        return grouped_bibs
+    elif action == "y":
+        grouped_bibs.sort(key=operator.itemgetter('journal'))
+        grouped_by_journal = []
+
+        for key, items in groupby(grouped_bibs, lambda i: i["journal"]):
+            grouped_by_journal.append(list(items))
+            updated_bibs = map(manual_update_out, grouped_by_journal)
+            updated_bibs = reduce(lambda a, b: a+b, updated_bibs)
+            return updated_bibs
+    else:
+        return update_bibs_out(grouped_bibs)
+
+
 def update_bibs(bibs, custom=False):
     if custom:
-        journal = raw_input("Insert abreviation: ")
+        journal = raw_input("Insert abreviation:\n")
     else:
         journal = bibs[0]["_text"]
 
@@ -97,13 +115,13 @@ def update_bibs(bibs, custom=False):
 
 def update_bibs_in(grouped_bibs):
     actions = {
-        "a": lambda items: map(lambda bibs: update_bibs(bibs), items),
+        "y": lambda items: map(lambda bibs: update_bibs(bibs), items),
         "m": lambda items: map(lambda bibs: manual_update(bibs), items),
         "n": lambda items: items
     }
-    print "{:d} itens can be {}".format(
-        len(grouped_bibs), grouped_bibs[0]["_type"])
-    action = raw_input("What you want? a(update all)/m(manual)/n(do nothing)")
+    print "\n "
+    action = raw_input("Abbreviate everthing?" +
+                       "y(yes, automatic)/m(manual)/n(do nothing)")
     grouped_bibs.sort(key=operator.itemgetter('journal'))
     grouped_by_journal = []
     for key, items in groupby(grouped_bibs, lambda i: i["journal"]):
@@ -155,12 +173,12 @@ def main():
     for key, items in groupby(bibs_status, lambda i: i["_type"]):
         grouped_bibs.append(list(items))
 
-    bibs_in_db, bibs_expanded, bibs_out_db = [], [], []
+    bibs_in_db, bibs_abreviated, bibs_out_db = [], [], []
     for bib in grouped_bibs:
         if bib[0]["_type"] == "out_db":
             bibs_out_db.append(bib)
-        elif bib[0]["_type"] == "expanded":
-            bibs_expanded.append(bib)
+        elif bib[0]["_type"] == "abreviated":
+            bibs_abreviated.append(bib)
         else:
             bibs_in_db.append(bib)
 
@@ -170,7 +188,12 @@ def main():
     # map(get_status, bibs_journal),
     # operator.itemgetter("_type"))
     # )
-
+    print "%d bibs are arxiv" % len(bibs_arxiv)
+    print "%d bibs don't have journal tag " % len(bibs_not_journal)
+    print "%d bibs are already abbreviated  " % len(bibs_abreviated[0])
+    print "%d bibs can be easily abbreviated " % len(bibs_in_db[0])
+    print "%d bibs must be manualy abbreviated, "% len(bibs_out_db[0]) + \
+        "at least this time "
     # pdb.set_trace()
     updated_bibs = reduce(
         lambda a, b: a + b,  map(update_bibs_in, bibs_in_db)
@@ -178,7 +201,7 @@ def main():
     updated_bibs += reduce(
         lambda a, b: a + b, map(update_bibs_out, bibs_out_db)
     )
-    updated_bibs += bibs_expanded[0]
+    updated_bibs += bibs_abreviated[0]
 
     # bibs = bibs_in_db
     # bibs = bibs_out_db + bibs_expanded
