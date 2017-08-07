@@ -6,6 +6,8 @@ from itertools import groupby
 import operator
 from bibtexparser.bwriter import BibTexWriter
 from bibtexparser.bibdatabase import BibDatabase
+from multiprocessing import Pool
+
 
 # with open("../scrapper/list_abbrev.json") as file_data:
 with open("../scrapper/list_abbrev.json") as file_data:
@@ -13,7 +15,6 @@ with open("../scrapper/list_abbrev.json") as file_data:
 
 
 def get_status(bib):
-
     def is_journal(item):
         return item["name"].lower() == bib["journal"].lower()
 
@@ -65,9 +66,8 @@ def manual_update_out(bibs):
         return manual_update_out(bibs)
 
 
-
 def update_bibs_out(bibs):
-    is_abreviation  = raw_input(
+    is_abreviation = raw_input(
         "'{}' is a abreviation?y(yes)n(no): ".format(bibs[0]["journal"])
     )
     if is_abreviation == "y":
@@ -78,7 +78,7 @@ def update_bibs_out(bibs):
         full_name = bibs[0]["journal"]
     else:
         return update_bibs_out(bibs)
-    list_abbrev.apend({"name": full_name, "abbrev": abreviation})
+    list_abbrev.append({"name": full_name, "abbrev": abreviation})
     for i, bib in enumerate(bibs):
         bibs[i]["journal"] = abreviation
     return bibs
@@ -114,20 +114,6 @@ def update_bibs_in(grouped_bibs):
     except TypeError:
         return update_bibs_in(grouped_bibs)
 
-
-
-    updated_bibs = reduce(lambda a, b: a+b, updated_bibs)
-    return updated_bibs
-
-
-def update_bibs_out(grouped_bibs):
-    grouped_bibs.sort(key=operator.itemgetter('journal'))
-    grouped_by_journal = []
-    for key, items in groupby(grouped_bibs, lambda i: i["journal"]):
-        grouped_by_journal.append(list(items))
-
-    updated_bibs = map(manual_update_out, grouped_by_journal)
-
     updated_bibs = reduce(lambda a, b: a+b, updated_bibs)
     return updated_bibs
 
@@ -160,7 +146,10 @@ def main():
          if "arxiv" in bib["journal"].lower()
          else bibs_published).append(bib)
     # pdb.set_trace()
-    bibs_status = map(get_status, bibs_published)
+    pool = Pool()
+    bibs_status = pool.map(get_status, bibs_published)
+    pool.close()
+    pool.join()
     bibs_status.sort(key=operator.itemgetter('_type'))
     grouped_bibs = []
     for key, items in groupby(bibs_status, lambda i: i["_type"]):
@@ -189,9 +178,6 @@ def main():
     updated_bibs += reduce(
         lambda a, b: a + b, map(update_bibs_out, bibs_out_db)
     )
-    # updated_bibs += reduce(
-        # lambda a, b: a + b, bibs_expanded
-    # )
     updated_bibs += bibs_expanded[0]
 
     # bibs = bibs_in_db
@@ -203,20 +189,9 @@ def main():
         ]
         for t in ["_text", "_type"]
     ]
-    # for item in updated_bibs:
-            # del item["_text"]
-            # del item["_type"]
     updated_bibs += bibs_arxiv + bibs_not_journal
     # bibtex.entries = bibs
 
-    # pdb.set_trace()
-    # new_bibtex = bibtexparser.bibdatabase.BibDatabase()
-    # new_bibtex.entries = bibs
-    # bibtex.entries = bibs
-    # pdb.set_trace()
-    # with open(args.output, "w") as bib_file:
-        # bibtexparser.dumps(bibtex, bib_file)
-        # bibtexparser.dump(bibtex, bib_file)
     writer = BibTexWriter()
     new_bibtex = BibDatabase()
     new_bibtex.entries = updated_bibs
