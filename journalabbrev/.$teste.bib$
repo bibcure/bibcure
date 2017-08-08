@@ -1,0 +1,955 @@
+% This file was created with JabRef 2.10.
+% Encoding: UTF-8
+
+
+@Article{Alonso1997Boundary,
+  Title                    = {{On the boundary conditions for the Dirac equation}},
+  Author                   = {Vidal Alonso and Salvatore De Vincenzo and Luigi Mondino},
+  Journal                  = {Eur. J. Phys.},
+  Year                     = {1997},
+  Pages                    = {315},
+  Volume                   = {18},
+
+  Url                      = {http://stacks.iop.org/0143-0807/18/i=5/a=001}
+}
+
+@Article{PhysRevB.55.1142,
+  Title                    = {{Nonstandard symmetry classes in mesoscopic normal-superconducting hybrid structures}},
+  Author                   = {Altland, Alexander and Zirnbauer, Martin R.},
+  Journal                  = {Phys. Rev. B},
+  Year                     = {1997},
+  Pages                    = {1142},
+  Volume                   = {55},
+
+  Doi                      = {10.1103/PhysRevB.55.1142}
+}
+
+@Article{MRE2Argaman,
+  Title                    = {Thermodynamic properties of titanium from ab initio calculations},
+  Author                   = {Uri Argaman and Eitan Eidelstein and Ohad Levy and Guy Makov},
+  Journal                  = {Materials Research Express},
+  Year                     = {2015},
+  Number                   = {1},
+  Pages                    = {016505},
+  Volume                   = {2},
+
+  Url                      = {http://stacks.iop.org/2053-1591/2/i=1/a=016505}
+}
+
+@Article{arik2003anticommutator,
+  Title                    = {{The anticommutator spin algebra, its representations and quantum group invariance}},
+  Author                   = {Arik, M and Kayserilioglu, U},
+  Journal                  = {International Journal of Modern Physics A},
+  Year                     = {2003},
+  Pages                    = {5039},
+  Volume                   = {18},
+
+  Publisher                = {World Scientific}
+}
+
+@Article{wilsonfermionsoptical,
+  Title                    = {Wilson Fermions and Axion Electrodynamics in Optical Lattices},
+  Author                   = {Bermudez, A. and Mazza, L. and Rizzi, M. and Goldman, N. and Lewenstein, M. and Martin-Delgado, M. A.},
+  Journal                  = {Phys. Rev. Lett.},
+  Year                     = {2010},
+
+  Month                    = {Nov},
+  Pages                    = {190404},
+  Volume                   = {105},
+
+  Doi                      = {10.1103/PhysRevLett.105.190404},
+  Issue                    = {19},
+  Numpages                 = {4},
+  Publisher                = {American Physical Society},
+  Url                      = {https://link.aps.org/doi/10.1103/PhysRevLett.105.190404}
+}
+
+@Article{bernard2002classification,
+  Title                    = {A classification of 2D random Dirac fermions},
+  Author                   = {Bernard, Denis and LeClair, Andr{\'e}},
+  Journal                  = {J. Phys. A Math. Gen.},
+  Year                     = {2002},
+  Pages                    = {2555},
+  Volume                   = {35},
+
+  Doi                      = {10.1088/0305-4470/35/11/303}
+}
+
+@Article{bernevig2006quantum,
+  Title                    = {Quantum spin Hall effect and topological phase transition in HgTe quantum wells},
+  Author                   = {Bernevig, B Andrei and Hughes, Taylor L and Zhang, Shou-Cheng},
+  Journal                  = {Science},
+  Year                     = {2006},
+  Pages                    = {1757},
+  Volume                   = {314},
+
+  Doi                      = {10.1126/science.1133734}
+}
+
+@Article{PhysRevLett.96.106802,
+  Title                    = {{Quantum Spin Hall Effect}},
+  Author                   = {Bernevig, B. Andrei and Zhang, Shou-Cheng},
+  Journal                  = {Phys. Rev. Lett.},
+  Year                     = {2006},
+  Pages                    = {106802},
+  Volume                   = {96},
+
+  Doi                      = {10.1103/PhysRevLett.96.106802}
+}
+
+@InProceedings{berry1987neutrino,
+  Title                    = {{Neutrino billiards: time-reversal symmetry-breaking without magnetic fields}},
+  Author                   = {Berry, Michael V and Mondragon, RJ},
+  Booktitle                = {Proceedings of the Royal Society of London A: Mathematical, Physical and Engineering Sciences},
+  Year                     = {1987},
+  Organization             = {The Royal Society},
+  Pages                    = {53},
+  Volume                   = {412},
+
+  Doi                      = {10.1098/rspa.1987.0080}
+}
+
+@Article{PhysRevB.50.17953,
+  Title                    = {Projector augmented-wave method},
+  Author                   = {Bl\"ochl, P. E.},
+  Journal                  = {Phys. Rev. B},
+  Year                     = {1994},
+
+  Month                    = {Dec},
+  Pages                    = {17953--17979},
+  Volume                   = {50},
+
+  Doi                      = {10.1103/PhysRevB.50.17953},
+  Issue                    = {24},
+  Numpages                 = {0},
+  Publisher                = {American Physical Society},
+  Url                      = {http://link.aps.org/doi/10.1103/PhysRevB.50.17953}
+}
+
+@Article{chandrasekharan2004introduction,
+  Title                    = {An introduction to chiral symmetry on the lattice},
+  Author                   = {Chandrasekharan, Shailesh and Wiese, U-J},
+  Journal                  = {Progress in Particle and Nuclear Physics},
+  Year                     = {2004},
+  Number                   = {2},
+  Pages                    = {373--418},
+  Volume                   = {53},
+
+  Doi                      = {10.1016/j.ppnp.2004.05.003},
+  Publisher                = {Elsevier}
+}
+
+@Article{chen2015surface,
+  Title                    = {{In-surface confinement of topological insulator nanowire surface states}},
+  Author                   = {Chen, Fan W and Jauregui, Luis A and Tan, Yaohua and Manfra, Michael and Klimeck, Gerhard and Chen, Yong P and Kubis, Tillmann},
+  Journal                  = {Appl. Phys. Lett.},
+  Year                     = {2015},
+  Pages                    = {121605},
+  Volume                   = {107},
+
+  Doi                      = {10.1063/1.4931975}
+}
+
+@Article{SRSungjae2016,
+  Title                    = {{Kondo-like zero-bias conductance anomaly in a three-dimensional topological insulator nanowire}},
+  Author                   = {Cho, Sungjae and Zhong, Ruidan and Schneeloch, John A and Gu, Genda and Mason, Nadya},
+  Journal                  = {Sci. Rep.},
+  Year                     = {2016},
+  Pages                    = {21767},
+  Volume                   = {6},
+
+  Doi                      = {10.1038/srep21767}
+}
+
+@Article{SLAC1,
+  Title                    = {{A new proposal for the fermion doubling problem}},
+  Author                   = {John P. Costella},
+  Journal                  = {arXiv:hep-lat/0207008},
+  Year                     = {2002},
+
+  Url                      = {https://arxiv.org/abs/hep-lat/0207008}
+}
+
+@Article{SLAC2,
+  Title                    = {{A new proposal for the fermion doubling problem. II. Improving the operators for finite lattices}},
+  Author                   = {John P. Costella},
+  Journal                  = {arXiv:hep-lat/0207015},
+  Year                     = {2002},
+
+  Url                      = {https://arxiv.org/abs/hep-lat/0207015}
+}
+
+@Article{creutz1994Talk,
+  Title                    = {Chiral symmetry and lattice gauge theory},
+  Author                   = {Michael Creutz},
+  Journal                  = {arXiv:hep-lat/9410008},
+  Year                     = {1994},
+
+  Url                      = {https://arxiv.org/abs/hep-lat/9410008}
+}
+
+@Article{creutz1994surface,
+  Title                    = {Surface modes and chiral symmetry (Wilson Fermions in a box)},
+  Author                   = {Creutz, Michael and Horvath, Ivan},
+  Journal                  = {Nucl. Phys. B},
+  Year                     = {1994},
+  Pages                    = {583},
+  Volume                   = {34},
+
+  Doi                      = {10.1016/0920-5632(94)90452-9},
+  Publisher                = {Elsevier}
+}
+
+@Article{DeGrand2007,
+  Title                    = {{Chiral symmetry and lattice QCD}},
+  Author                   = {DeGrand, T.},
+  Journal                  = {The European Physical Journal Special Topics},
+  Year                     = {2007},
+  Pages                    = {1},
+  Volume                   = {152},
+
+  Doi                      = {10.1140/epjst/e2007-00375-4}
+}
+
+@Article{PhysRevLett.92.246401,
+  Title                    = {Van der Waals Density Functional for General Geometries},
+  Author                   = {Dion, M. and Rydberg, H. and Schr\"oder, E. and Langreth, D. C. and 
+Lundqvist, B. I.},
+  Journal                  = {Phys. Rev. Lett.},
+  Year                     = {2004},
+
+  Month                    = {Jun},
+  Pages                    = {246401},
+  Volume                   = {92},
+
+  Doi                      = {10.1103/PhysRevLett.92.246401},
+  Issue                    = {24},
+  Numpages                 = {4},
+  Publisher                = {American Physical Society},
+  Url                      = {http://link.aps.org/doi/10.1103/PhysRevLett.92.246401}
+}
+
+@Article{Fabian2014TIDots,
+  Title                    = {{Gate-defined coupled quantum dots in topological insulators}},
+  Author                   = {Ertler, Christian and Raith, Martin and Fabian, Jaroslav},
+  Journal                  = {Phys. Rev. B},
+  Year                     = {2014},
+  Pages                    = {075432},
+  Volume                   = {89},
+
+  Doi                      = {10.1103/PhysRevB.89.075432}
+}
+
+@Article{Ferreira2011LowBiasNDR,
+  Title                    = {Low-bias negative differential resistance in graphene nanoribbon superlattices},
+  Author                   = {Ferreira, Gerson J. and Leuenberger, Michael N. and Loss, Daniel and Egues, J. Carlos},
+  Journal                  = {Phys. Rev. B},
+  Year                     = {2011},
+  Pages                    = {125453},
+  Volume                   = {84},
+
+  Doi                      = {10.1103/PhysRevB.84.125453}
+}
+
+@Article{ferreira2013magnetically,
+  Title                    = {{Magnetically defined qubits on 3D topological insulators}},
+  Author                   = {Ferreira, Gerson J. and Loss, Daniel},
+  Journal                  = {Phys. Rev. Lett.},
+  Year                     = {2013},
+  Number                   = {10},
+  Pages                    = {106802},
+  Volume                   = {111},
+
+  Doi                      = {10.1103/PhysRevLett.111.106802}
+}
+
+@Article{freysoldtPRB2016,
+  Title                    = {Electron and chemical reservoir corrections for point-defect formation 
+energies},
+  Author                   = {Freysoldt, Christoph and Lange, Bj{\"o}rn and Neugebauer, J{\"o}rg and 
+Yan, Qimin and Lyons, John L and Janotti, Anderson and Van de Walle, Chris G},
+  Journal                  = {Phys. Rev. B},
+  Year                     = {2016},
+  Number                   = {16},
+  Pages                    = {165206},
+  Volume                   = {93},
+
+  Publisher                = {APS}
+}
+
+@Article{Thomas2016,
+  Title                    = {Pure spin current devices based on ferromagnetic topological insulators},
+  Author                   = {G{\"o}tte, Matthias and Joppe, Michael and Dahm, Thomas},
+  Journal                  = {Sci. Rep.},
+  Year                     = {2016},
+  Pages                    = {36070},
+  Volume                   = {6},
+
+  Doi                      = {10.1038/srep36070}
+}
+
+@Article{Thomas2016old,
+  Title                    = {{Pure spin current devices based on ferromagnetic topological insulators}},
+  Author                   = {G\"otte, Matthias and Joppe Michael and Dahm Thomas},
+  Journal                  = {Sci. Rep.},
+  Year                     = {2016},
+  Number                   = {36070},
+
+  Doi                      = {10.1038/srep36070}
+}
+
+@Article{PhysRevApplied.2.054010,
+  Title                    = {{Tunneling Magnetoresistance Devices Based on Topological Insulators: Ferromagnet Insulator Topological-Insulator Junctions Employing {Bi$_2$Se$_3$}}},
+  Author                   = {G\"otte, Matthias and Paananen, Tomi and Reiss, G\"unter and Dahm, Thomas},
+  Journal                  = {Phys. Rev. Appl.},
+  Year                     = {2014},
+  Pages                    = {054010},
+  Volume                   = {2},
+
+  Doi                      = {10.1103/PhysRevApplied.2.054010}
+}
+
+@Article{kwant,
+  Title                    = {{Kwant: a software package for quantum transport}},
+  Author                   = {Groth, Christoph W and Wimmer, Michael and Akhmerov, Anton R and Waintal, Xavier},
+  Journal                  = {New J. Phys.},
+  Year                     = {2014},
+  Pages                    = {063065},
+  Volume                   = {16},
+
+  Doi                      = {doi:10.1088/1367-2630/16/6/063065}
+}
+
+@Article{hao2011topological,
+  Title                    = {{Topological insulator ribbon: Surface states and dynamical response}},
+  Author                   = {Hao, Lei and Thalmeier, Peter and Lee, T. K.},
+  Journal                  = {Phys. Rev. B},
+  Year                     = {2011},
+  Pages                    = {235303},
+  Volume                   = {84},
+
+  Doi                      = {10.1103/PhysRevB.84.235303}
+}
+
+@Article{RevModPhys.82.3045,
+  Title                    = {{Colloquium: Topological Insulators}},
+  Author                   = {Hasan, M. Z. and Kane, C. L.},
+  Journal                  = {Rev. Mod. Phys.},
+  Year                     = {2010},
+  Pages                    = {3045},
+  Volume                   = {82},
+
+  Doi                      = {10.1103/RevModPhys.82.3045}
+}
+
+@Article{heinzner2005symmetry,
+  Title                    = {Symmetry classes of disordered fermions},
+  Author                   = {Heinzner, Peter and Huckleberry, A and Zirnbauer, Martin R},
+  Journal                  = {Communications in mathematical physics},
+  Year                     = {2005},
+  Pages                    = {725},
+  Volume                   = {257},
+
+  Doi                      = {10.1007/s00220-005-1330-9}
+}
+
+@Article{hernandez2012finite,
+  Title                    = {Finite-difference method for transport of two-dimensional massless Dirac fermions in a ribbon geometry},
+  Author                   = {Hern{\'a}ndez, Alexis R and Lewenkopf, Caio H},
+  Journal                  = {Phys. Rev. B},
+  Year                     = {2012},
+  Number                   = {15},
+  Pages                    = {155439},
+  Volume                   = {86},
+
+  Doi                      = {10.1103/PhysRevB.86.155439}
+}
+
+@Article{iorio2016band,
+  Title                    = {{Band gap in Bi2Se3 topological insulator nanowires: magnetic and geometrical effects}},
+  Author                   = {Iorio, P and Perroni, CA and Cataudella, V},
+  Journal                  = {arXiv:1601.02785},
+
+  Url                      = {https://arxiv.org/abs/1601.02785}
+}
+
+@Article{Konig766,
+  Title                    = {{Quantum Spin Hall Insulator State in HgTe Quantum Wells}},
+  Author                   = {K{\"o}nig, Markus and Wiedmann, Steffen and Br{\"u}ne, Christoph and Roth, Andreas and Buhmann, Hartmut and Molenkamp, Laurens W. and Qi, Xiao-Liang and Zhang, Shou-Cheng},
+  Journal                  = {Science},
+  Year                     = {2007},
+  Pages                    = {766},
+  Volume                   = {318},
+
+  Doi                      = {10.1126/science.1148047}
+}
+
+@InCollection{Kaplan2009,
+  Title                    = {Chiral Symmetry and Lattice Fermions},
+  Author                   = {David B. Kaplan},
+  Booktitle                = {Modern Perspectives in Lattice QCD},
+  Publisher                = {Oxford University Press},
+  Year                     = {2011},
+  Chapter                  = {4},
+  Editor                   = {Laurent Lellouch and Rainer Sommer and Benjamin Svetitsky and Anastassios Vladikas and Leticia F. Cugliandolo},
+  Pages                    = {223},
+
+  Doi                      = {10.1093/acprof:oso/9780199691609.001.0001}
+}
+
+@Article{Kaplan2009old,
+  Title                    = {{Chiral Symmetry and Lattice Fermions}},
+  Author                   = {Kaplan, David B.},
+  Journal                  = {arXiv:0912.2560},
+  Year                     = {2009},
+
+  Url                      = {https://arxiv.org/abs/0912.2560}
+}
+
+@Article{kaplan1992method,
+  Title                    = {A Method for simulating chiral fermions on the lattice},
+  Author                   = {Kaplan, David B},
+  Journal                  = {Phys. Lett. B},
+  Year                     = {1992},
+  Number                   = {3-4},
+  Pages                    = {342--347},
+  Volume                   = {288},
+
+  Doi                      = {10.1016/0370-2693(92)91112-M},
+  Publisher                = {Elsevier}
+}
+
+@Article{Kaplan2012Spacetime,
+  Title                    = {Spacetime as a Topological Insulator: Mechanism for the Origin of the Fermion Generations},
+  Author                   = {Kaplan, David B. and Sun, Sichun},
+  Journal                  = {Phys. Rev. Lett.},
+  Year                     = {2012},
+
+  Month                    = {May},
+  Pages                    = {181807},
+  Volume                   = {108},
+
+  Doi                      = {10.1103/PhysRevLett.108.181807},
+  Issue                    = {18},
+  Numpages                 = {4},
+  Publisher                = {American Physical Society},
+  Url                      = {https://link.aps.org/doi/10.1103/PhysRevLett.108.181807}
+}
+
+@Article{Karsten1981,
+  Title                    = {{Lattice fermions in euclidean space-time}},
+  Author                   = {Karsten, Luuk H.},
+  Journal                  = {Phys. Lett. B},
+  Year                     = {1981},
+  Pages                    = {315},
+  Volume                   = {104},
+
+  Doi                      = {10.1016/0370-2693(81)90133-7}
+}
+
+@Article{katsnelson2006chiral,
+  Title                    = {{Chiral tunnelling and the Klein paradox in graphene}},
+  Author                   = {Katsnelson, MI and Novoselov, KS and Geim, AK},
+  Journal                  = {Nat. Phys.},
+  Year                     = {2006},
+  Pages                    = {620},
+  Volume                   = {2},
+
+  Doi                      = {10.1038/nphys384}
+}
+
+@Article{PhysRevB.84.073109,
+  Title                    = {{Thickness-dependent bulk properties and weak antilocalization effect in topological insulator Bi${}_{2}$Se${}_{3}$}},
+  Author                   = {Kim, Yong Seung and Brahlek, Matthew and Bansal, Namrata and Edrey, Eliav and Kapilevich, Gary A. and Iida, Keiko and Tanimura, Makoto and Horibe, Yoichi and Cheong, Sang-Wook and Oh, Seongshik},
+  Journal                  = {Phys. Rev. B},
+  Year                     = {2011},
+  Pages                    = {073109},
+  Volume                   = {84},
+
+  Doi                      = {10.1103/PhysRevB.84.073109}
+}
+
+@Article{Klein1929,
+  Title                    = {{Die Reflexion von Elektronen an einem Potentialsprung nach der relativistischen Dynamik von Dirac}},
+  Author                   = {Klein, O.},
+  Journal                  = {Z. Phys.},
+  Year                     = {1929},
+  Pages                    = {157},
+  Volume                   = {53},
+
+  Doi                      = {10.1007/BF01339716}
+}
+
+@Article{Kogut1975,
+  Title                    = {{Hamiltonian formulation of Wilson's lattice gauge theories}},
+  Author                   = {Kogut, John B. and Susskind, Leonard},
+  Journal                  = {Phys. Rev. D},
+  Year                     = {1975},
+  Pages                    = {395},
+  Volume                   = {11},
+
+  Doi                      = {10.1103/PhysRevD.11.395}
+}
+
+@Article{vasp1,
+  Title                    = {Efficiency of ab-initio total energy calculations for metals and semiconductors using a plane-wave basis set},
+  Author                   = {Kresse, Georg and Furthm{\"u}ller, J{\"u}rgen},
+  Journal                  = {Comput. Mater. Sci.},
+  Year                     = {1996},
+  Number                   = {1},
+  Pages                    = {15--50},
+  Volume                   = {6},
+
+  Doi                      = {10.1016/0927-0256(96)00008-0},
+  Publisher                = {Elsevier}
+}
+
+@Article{vasp1old,
+  Title                    = {Efficiency of ab-initio total energy calculations for metals and semiconductors using a plane-wave basis set},
+  Author                   = {G. Kresse and J. Furthm$\rm\ddot{u}$ller},
+  Journal                  = {Comput. Mater. Sci.},
+  Year                     = {1996},
+  Pages                    = {15},
+  Volume                   = {6},
+
+  Url                      = {https://journals.aps.org/prb/abstract/10.1103/PhysRevB.54.11169}
+}
+
+@Article{PRB67Kutepov,
+  Title                    = {Crystal structures of Ti under high pressure: Theory},
+  Author                   = {Kutepov, A. L. and Kutepova, S. G.},
+  Journal                  = {Phys. Rev. B},
+  Year                     = {2003},
+
+  Month                    = {Apr},
+  Pages                    = {132102},
+  Volume                   = {67},
+
+  Doi                      = {10.1103/PhysRevB.67.132102},
+  Issue                    = {13},
+  Numpages                 = {4},
+  Publisher                = {American Physical Society},
+  Url                      = {https://link.aps.org/doi/10.1103/PhysRevB.67.132102}
+}
+
+@Article{PhysRevB.82.081101,
+  Title                    = {Higher-accuracy van der Waals density functional},
+  Author                   = {Lee, Kyuho and Murray, \'Eamonn D. and Kong, Lingzhu and Lundqvist, Bengt I. and Langreth, David C.},
+  Journal                  = {Phys. Rev. B},
+  Year                     = {2010},
+
+  Month                    = {Aug},
+  Pages                    = {081101},
+  Volume                   = {82},
+
+  Doi                      = {10.1103/PhysRevB.82.081101},
+  Issue                    = {8},
+  Numpages                 = {4},
+  Publisher                = {American Physical Society},
+  Url                      = {http://link.aps.org/doi/10.1103/PhysRevB.82.081101}
+}
+
+@Article{VDW-DF2,
+  Title                    = {Higher-accuracy van der Waals density functional},
+  Author                   = {Lee, Kyuho and Murray, \'Eamonn D. and Kong, Lingzhu and Lundqvist, Bengt I. and Langreth, David C.},
+  Journal                  = {Phys. Rev. B},
+  Year                     = {2010},
+
+  Month                    = {Aug},
+  Pages                    = {081101},
+  Volume                   = {82},
+
+  Doi                      = {10.1103/PhysRevB.82.081101},
+  Issue                    = {8},
+  Numpages                 = {4},
+  Publisher                = {American Physical Society},
+  Url                      = {http://link.aps.org/doi/10.1103/PhysRevB.82.081101}
+}
+
+@Book{Kaplan2009book,
+  Title                    = {Modern Perspectives in Lattice QCD: Quantum Field Theory and High Performance Computing: Lecture Notes of the Les Houches Summer School: Volume 93, August 2009},
+  Author                   = {Laurent Lellouch and Rainer Sommer and Benjamin Svetitsky and Anastassios Vladikas and Leticia F. Cugliandolo},
+  Publisher                = {Oxford University Press},
+  Year                     = {2011},
+
+  ISBN                     = {0199691606}
+}
+
+@Article{mccann2004symmetry,
+  Title                    = {{Symmetry of boundary conditions of the Dirac equation for electrons in carbon nanotubes}},
+  Author                   = {McCann, Edward and Fal’ko, Vladimir I},
+  Journal                  = {J. Phys. Condens. Mat.},
+  Year                     = {2004},
+  Pages                    = {2371},
+  Volume                   = {16},
+
+  Doi                      = {10.1088/0953-8984/16/13/016}
+}
+
+@Article{PRB80Mei,
+  Title                    = {Density-functional study of the thermodynamic properties and the pressure\char21{}temperature phase diagram of Ti},
+  Author                   = {Mei, Zhi-Gang and Shang, Shun-Li and Wang, Yi and Liu, Zi-Kui},
+  Journal                  = {Phys. Rev. B},
+  Year                     = {2009},
+
+  Month                    = {Sep},
+  Pages                    = {104116},
+  Volume                   = {80},
+
+  Doi                      = {10.1103/PhysRevB.80.104116},
+  Issue                    = {10},
+  Numpages                 = {9},
+  Publisher                = {American Physical Society},
+  Url                      = {https://link.aps.org/doi/10.1103/PhysRevB.80.104116}
+}
+
+@Article{michetti2012helical,
+  Title                    = {Helical edge states in multiple topological mass domains},
+  Author                   = {Michetti, P and Penteado, PH and Egues, Jos{\'e} Carlos and Recher, P},
+  Journal                  = {Semicond. Sci. Technol.},
+  Year                     = {2012},
+  Pages                    = {124007},
+  Volume                   = {27},
+
+  Doi                      = {10.1088/0268-1242/27/12/124007}
+}
+
+@Article{0953-8984-9-2-014,
+  Title                    = {{Electronic structure and thermoelectric properties of bismuth telluride and bismuth selenide}},
+  Author                   = {S. K. Mishra and S. Satpathy and O. Jepsen},
+  Journal                  = {J. Phys.: Condens. Matter},
+  Year                     = {1997},
+  Pages                    = {461},
+  Volume                   = {9},
+
+  Url                      = {http://iopscience.iop.org/0953-8984/9/2/014}
+}
+
+@Article{PhysRevB.13.5188,
+  Title                    = {Special points for Brillouin-zone integrations},
+  Author                   = {Monkhorst, Hendrik J. and Pack, James D.},
+  Journal                  = {Phys. Rev. B},
+  Year                     = {1976},
+
+  Month                    = {Jun},
+  Pages                    = {5188--5192},
+  Volume                   = {13},
+
+  Doi                      = {10.1103/PhysRevB.13.5188},
+  Issue                    = {12},
+  Numpages                 = {0},
+  Publisher                = {American Physical Society},
+  Url                      = {http://link.aps.org/doi/10.1103/PhysRevB.13.5188}
+}
+
+@Article{NIELSEN1981219,
+  Title                    = {A no-go theorem fodr regularizing chiral fermions},
+  Author                   = {H. B. Nielsen and M. Ninomiya},
+  Journal                  = {Phys. Lett. B},
+  Year                     = {1981},
+  Number                   = {2},
+  Pages                    = {219 - 223},
+  Volume                   = {105},
+
+  Doi                      = {10.1016/0370-2693(81)91026-1},
+  ISSN                     = {0370-2693}
+}
+
+@Article{nielsen1981absence,
+  Title                    = {{Absence of neutrinos on a lattice:(I). Proof by homotopy theory}},
+  Author                   = {H. B. Nielsen and M. Ninomiya},
+  Journal                  = {Nucl. Phys. B},
+  Year                     = {1981},
+  Pages                    = {20},
+  Volume                   = {185},
+
+  Doi                      = {10.1016/0550-3213(81)90361-8}
+}
+
+@Article{JPCMMiwa2017,
+  Title                    = {An ab initio investigation of Bi 2 Se 3 topological insulator deposited on amorphous SiO 2},
+  Author                   = {I S S de Oliveira and W L Scopel and R H Miwa},
+  Journal                  = {J. Phys. Condens. Mat.},
+  Year                     = {2017},
+  Number                   = {4},
+  Pages                    = {045302},
+  Volume                   = {29},
+
+  Url                      = {http://stacks.iop.org/0953-8984/29/i=4/a=045302}
+}
+
+@Article{PhysRevB.88.085316,
+  Title                    = {{Three-dimensional topological insulator quantum dot for optically controlled quantum memory and quantum computing}},
+  Author                   = {Paudel, Hari P. and Leuenberger, Michael N.},
+  Journal                  = {Phys. Rev. B},
+  Year                     = {2013},
+  Pages                    = {085316},
+  Volume                   = {88},
+
+  Doi                      = {10.1103/PhysRevB.88.085316}
+}
+
+@Article{PBE,
+  Title                    = {Generalized Gradient Approximation Made Simple},
+  Author                   = {J. P. Perdew and K. Burke and M. Ernzerhof},
+  Journal                  = {Phys. Rev. Lett.},
+  Year                     = {1996},
+  Pages                    = {3865},
+  Volume                   = {77},
+
+  Doi                      = {10.1103/PhysRevLett.77.3865}
+}
+
+@Article{RevModPhys.83.1057,
+  Title                    = {{Topological insulators and superconductors}},
+  Author                   = {Qi, Xiao-Liang and Zhang, Shou-Cheng},
+  Journal                  = {Rev. Mod. Phys.},
+  Year                     = {2011},
+  Pages                    = {1057},
+  Volume                   = {83},
+
+  Doi                      = {10.1103/RevModPhys.83.1057}
+}
+
+@Article{Quinn1986SLAC,
+  Title                    = {New Formulation for the Lattice-Fermion Derivative: Locality and Chirality without Spectrum Doubling},
+  Author                   = {Quinn, H. R. and Weinstein, M.},
+  Journal                  = {Phys. Rev. Lett.},
+  Year                     = {1986},
+
+  Month                    = {Nov},
+  Pages                    = {2617--2620},
+  Volume                   = {57},
+
+  Doi                      = {10.1103/PhysRevLett.57.2617},
+  Issue                    = {21},
+  Numpages                 = {0},
+  Publisher                = {American Physical Society},
+  Url                      = {https://link.aps.org/doi/10.1103/PhysRevLett.57.2617}
+}
+
+@Article{Schnyder2008PRBClassification,
+  Title                    = {{Classification of topological insulators and superconductors in three spatial dimensions}},
+  Author                   = {Schnyder, Andreas P. and Ryu, Shinsei and Furusaki, Akira and Ludwig, Andreas W. W.},
+  Journal                  = {Phys. Rev. B},
+  Year                     = {2008},
+  Pages                    = {195125},
+  Volume                   = {78},
+
+  Doi                      = {10.1103/PhysRevB.78.195125}
+}
+
+@Article{shan2010effective,
+  Title                    = {{Effective continuous model for surface states and thin films of three-dimensional topological insulators}},
+  Author                   = {Shan, Wen-Yu and Lu, Hai-Zhou and Shen, Shun-Qing},
+  Journal                  = {New J. Phys.},
+  Year                     = {2010},
+  Pages                    = {043048},
+  Volume                   = {12},
+
+  Doi                      = {10.1088/1367-2630/12/4/043048}
+}
+
+@Article{PRB83Vanderbilt,
+  Title                    = {Computing topological invariants without inversion symmetry},
+  Author                   = {Soluyanov, Alexey A. and Vanderbilt, David},
+  Journal                  = {Phys. Rev. B},
+  Year                     = {2011},
+
+  Month                    = {Jun},
+  Pages                    = {235401},
+  Volume                   = {83},
+
+  Doi                      = {10.1103/PhysRevB.83.235401},
+  Issue                    = {23},
+  Numpages                 = {9},
+  Publisher                = {American Physical Society},
+  Url                      = {http://link.aps.org/doi/10.1103/PhysRevB.83.235401}
+}
+
+@Article{stacey82,
+  Title                    = {Eliminating lattice fermion doubling},
+  Author                   = {Stacey, Richard},
+  Journal                  = {Phys. Rev. D},
+  Year                     = {1982},
+
+  Month                    = {Jul},
+  Pages                    = {468--472},
+  Volume                   = {26},
+
+  Doi                      = {10.1103/PhysRevD.26.468},
+  Issue                    = {2},
+  Numpages                 = {0},
+  Publisher                = {American Physical Society},
+  Url                      = {https://link.aps.org/doi/10.1103/PhysRevD.26.468}
+}
+
+@Article{Susskind1977Staggered,
+  Title                    = {Lattice fermions},
+  Author                   = {Susskind, Leonard},
+  Journal                  = {Phys. Rev. D},
+  Year                     = {1977},
+
+  Month                    = {Nov},
+  Pages                    = {3031--3039},
+  Volume                   = {16},
+
+  Doi                      = {10.1103/PhysRevD.16.3031},
+  Issue                    = {10},
+  Numpages                 = {0},
+  Publisher                = {American Physical Society},
+  Url                      = {https://link.aps.org/doi/10.1103/PhysRevD.16.3031}
+}
+
+@Article{Svetitsky1980SLAC,
+  Title                    = {Dynamical breaking of chiral symmetry in lattice gauge theories},
+  Author                   = {Svetitsky, Benjamin and Drell, Sidney D. and Quinn, Helen R. and Weinstein, Marvin},
+  Journal                  = {Phys. Rev. D},
+  Year                     = {1980},
+
+  Month                    = {Jul},
+  Pages                    = {490--504},
+  Volume                   = {22},
+
+  Doi                      = {10.1103/PhysRevD.22.490},
+  Issue                    = {2},
+  Numpages                 = {0},
+  Publisher                = {American Physical Society},
+  Url                      = {https://link.aps.org/doi/10.1103/PhysRevD.22.490}
+}
+
+@Article{PhysRevB.76.125112,
+  Title                    = {Van der Waals density functional: Self-consistent potential and the 
+nature of the van der Waals bond},
+  Author                   = {Thonhauser, T. and Cooper, Valentino R. and Li, Shen and Puzder, 
+Aaron and Hyldgaard, Per and Langreth, David C.},
+  Journal                  = {Phys. Rev. B},
+  Year                     = {2007},
+
+  Month                    = {Sep},
+  Pages                    = {125112},
+  Volume                   = {76},
+
+  Doi                      = {10.1103/PhysRevB.76.125112},
+  Issue                    = {12},
+  Numpages                 = {11},
+  Publisher                = {American Physical Society},
+  Url                      = {http://link.aps.org/doi/10.1103/PhysRevB.76.125112}
+}
+
+@Article{finitedifference2008,
+  Title                    = {Finite difference method for transport properties of massless Dirac fermions},
+  Author                   = {Tworzyd\l{}o, J. and Groth, C. W. and Beenakker, C. W. J.},
+  Journal                  = {Phys. Rev. B},
+  Year                     = {2008},
+
+  Month                    = {Dec},
+  Pages                    = {235438},
+  Volume                   = {78},
+
+  Doi                      = {10.1103/PhysRevB.78.235438},
+  Issue                    = {23},
+  Numpages                 = {10},
+  Publisher                = {American Physical Society},
+  Url                      = {https://link.aps.org/doi/10.1103/PhysRevB.78.235438}
+}
+
+@Article{wilson1974confinement,
+  Title                    = {{Confinement of quarks}},
+  Author                   = {Wilson, Kenneth G},
+  Journal                  = {Phys. Rev. D},
+  Year                     = {1974},
+  Pages                    = {2445},
+  Volume                   = {10},
+
+  Doi                      = {10.1103/PhysRevD.10.2445}
+}
+
+@Article{yeats2017local,
+  Title                    = {{Local optical control of ferromagnetism and chemical potential in a topological insulator}},
+  Author                   = {Yeats, Andrew L. and Mintun, Peter J. and Pan, Yu and Richardella, Anthony and Buckley, Bob B. and Samarth, Nitin and Awschalom, David D.},
+  Journal                  = {arXiv:1704.00831},
+  Year                     = {2017},
+
+  Url                      = {https://arxiv.org/abs/1704.00831}
+}
+
+@Article{Yeatse1500640,
+  Title                    = {{Persistent optical gating of a topological insulator}},
+  Author                   = {Yeats, Andrew L. and Pan, Yu and Richardella, Anthony and Mintun, Peter J. and Samarth, Nitin and Awschalom, David D.},
+  Journal                  = {Sci. Adv.},
+  Year                     = {2015},
+  Pages                    = {e1500640},
+  Volume                   = {1},
+
+  Doi                      = {10.1126/sciadv.1500640}
+}
+
+@Article{PRB84Bernevig,
+  Title                    = {Equivalent expression of ${\mathbb{Z}}_{2}$ topological invariant for band insulators using the non-Abelian Berry connection},
+  Author                   = {Yu, Rui and Qi, Xiao Liang and Bernevig, Andrei and Fang, Zhong and Dai, Xi},
+  Journal                  = {Phys. Rev. B},
+  Year                     = {2011},
+
+  Month                    = {Aug},
+  Pages                    = {075119},
+  Volume                   = {84},
+
+  Doi                      = {10.1103/PhysRevB.84.075119},
+  Issue                    = {7},
+  Numpages                 = {12},
+  Publisher                = {American Physical Society},
+  Url                      = {http://link.aps.org/doi/10.1103/PhysRevB.84.075119}
+}
+
+@Article{zhang2009topological,
+  Title                    = {{Topological insulators in Bi2Se3, Bi2Te3 and Sb2Te3 with a single Dirac cone on the surface}},
+  Author                   = {Zhang, Haijun and Liu, Chao-Xing and Qi, Xiao-Liang and Dai, Xi and Fang, Zhong and Zhang, Shou-Cheng},
+  Journal                  = {Nat. Phys.},
+  Year                     = {2009},
+  Pages                    = {438},
+  Volume                   = {5},
+
+  Doi                      = {10.1038/NPHYS1270}
+}
+
+@Article{NJP12Zhang,
+  Title                    = {First-principles studies of the three-dimensional strong topological insulators Bi 2 Te 3 , Bi 2 Se 3 and Sb 2 Te 3},
+  Author                   = {Wei Zhang and Rui Yu and Hai-Jun Zhang and Xi Dai and Zhong Fang},
+  Journal                  = {New J. Phys.},
+  Year                     = {2010},
+  Number                   = {6},
+  Pages                    = {065013},
+  Volume                   = {12},
+
+  Url                      = {http://stacks.iop.org/1367-2630/12/i=6/a=065013}
+}
+
+@Article{PRB82Zhao,
+  Title                    = {Mott scattering at the interface between a metal and a topological insulator},
+  Author                   = {Zhao, Erhai and Zhang, Chun and Lababidi, Mahmoud},
+  Journal                  = {Phys. Rev. B},
+  Year                     = {2010},
+
+  Month                    = {Nov},
+  Pages                    = {205331},
+  Volume                   = {82},
+
+  Doi                      = {10.1103/PhysRevB.82.205331},
+  Issue                    = {20},
+  Numpages                 = {5},
+  Publisher                = {American Physical Society},
+  Url                      = {https://link.aps.org/doi/10.1103/PhysRevB.82.205331}
+}
+
+@Article{zhou2016LatticeModel,
+  Title                    = {{Two-dimensional lattice model for the surface states of topological insulators}},
+  Author                   = {Zhou, Yan-Feng and Jiang, Hua and Xie, X. C. and Sun, Qing-Feng},
+  Journal                  = {Phys. Rev. B},
+  Year                     = {2017},
+  Pages                    = {245137},
+  Volume                   = {95},
+
+  Doi                      = {10.1103/PhysRevB.95.245137}
+}
+

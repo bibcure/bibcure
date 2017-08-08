@@ -2,7 +2,6 @@ from lxml import etree
 import urllib2
 import json
 
-
 header = 'Mozilla/5.0 (X11; Linux x86_64) '
 header += 'AppleWebKit/537.36 (KHTML, like Gecko)'
 header += 'Chrome/59.0.3071.109 Safari/537.36'
@@ -10,10 +9,10 @@ chars = [chr(c) for c in range(ord("a"), ord("z")+1)]
 parser = etree.HTMLParser()
 list_of_words_not_abbvr = ["AND", "OF", "ACM", "IN", "NEW"]
 [list_of_words_not_abbvr.append(c.capitalize()) for c in chars]
+main_url = "http://www.personal.leeds.ac.uk/~menmwi/ISIabbr/%_abrvjt.html"
 
 
 def get_url(initial):
-    main_url = "http://www.personal.leeds.ac.uk/~menmwi/ISIabbr/%_abrvjt.html"
     return main_url.replace("%", initial.capitalize())
 
 
@@ -41,6 +40,14 @@ def humanize_abbvr(abbvr):
     return " ".join(capitalized_abbvr)
 
 
+
+def cure_data(item):
+    return {
+            "name": item["name"].replace("\t", "").replace("\n", ""),
+            "abbvr": humanize_abbvr(item["abbvr"])
+        }
+
+
 def get_itens(url):
     tree = get_html_tree(url)
     result = [
@@ -51,13 +58,7 @@ def get_itens(url):
         for name, abbvr in zip(tree.xpath("//dl//dt"), tree.xpath("//dl//dd"))
     ]
     result = list(filter(lambda item: item["abbvr"] is not None, result))
-    result = [
-        {
-            "name": item["name"].replace("\t", "").replace("\n", ""),
-            "abbvr": humanize_abbvr(item["abbvr"])
-        }
-        for item in result
-    ]
+    result = list(map(cure_data, result))
     return result
 
 

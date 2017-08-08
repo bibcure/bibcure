@@ -9,9 +9,11 @@ __pycache__/
 # Distribution / packaging
 .Python
 env/
-build/
 develop-eggs/
-dist/
+journalabbrev/eggs/
+journalabbrev/Journal_Abbreviation.egg-info/
+journalabbrev/dist/
+journalabbrev/build/
 downloads/
 eggs/
 .eggs/
