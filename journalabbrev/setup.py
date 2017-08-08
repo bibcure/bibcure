@@ -1,4 +1,7 @@
 from setuptools import setup, find_packages
+from os.path import expanduser
+
+home = expanduser("~")
 
 setup(
 	name = "Journal Abbreviation",
@@ -6,7 +9,7 @@ setup(
 	scripts = ["bin/journalabbrev"],
 	install_requires = ["bibtexparser"],
 	data_files = [
-		("/opt/journalabbreviation/", ["static/db_abbrev.json"])
+		(home+"/.journalabbreviation/", ["static/db_abbrev.json"])
 	],
 	author = "Bruno Messias",
 	author_email = "contato@brunomessias.com",

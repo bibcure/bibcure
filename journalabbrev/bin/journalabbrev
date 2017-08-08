@@ -8,11 +8,13 @@ from bibtexparser.bwriter import BibTexWriter
 from bibtexparser.bibdatabase import BibDatabase
 from multiprocessing import Pool
 import sys
+from os.path import expanduser
+
 
 
 class Db_abbrev():
     def __init__(self):
-        self.db_file = "/opt/journalabbreviation/db_abbrev.json"
+        self.db_file = expanduser("~")+"/.journalabbreviation/db_abbrev.json"
         self.updates_db = []
         self.open()
 
