@@ -10,10 +10,10 @@ __pycache__/
 .Python
 env/
 develop-eggs/
-journalabbrev/eggs/
-journalabbrev/Journal_Abbreviation.egg-info/
-journalabbrev/dist/
-journalabbrev/build/
+eggs/
+Journal_Abbreviation.egg-info/
+dist/
+build/
 downloads/
 eggs/
 .eggs/

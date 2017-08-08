@@ -1,0 +1,2 @@
+/usr/local/lib/python2.7/dist-packages/Journal_Abbreviation-0.1-py2.7.egg
+/usr/local/bin/journalabbrev
