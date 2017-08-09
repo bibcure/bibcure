@@ -72,7 +72,18 @@ def main():
         help="bibtex output file")
 
     args = parser.parse_args()
-    bibtex = bibtexparser.loads(args.input.read())
+    dict_parser = {
+        'keywords': 'keyword',
+        'keyw': 'keyword',
+        'subjects': 'subject',
+        'urls': 'url',
+        'link': 'url',
+        'links': 'url',
+        'editors': 'editor',
+        'authors': 'author'}
+    parser = bibtexparser.bparser.BibTexParser()
+    parser.alt_dict = dict_parser
+    bibtex = bibtexparser.loads(args.input.read(), parser=parser)
     if len(bibtex.entries) == 0:
         print("Input File is empty or corrupted.")
         sys.exit(1)

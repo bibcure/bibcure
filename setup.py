@@ -6,7 +6,7 @@ readme.close()
 
 setup(
     name="journalabbrev",
-    version="0.1.6",
+    version="0.1.7",
     packages = find_packages(exclude=["build",]),
     scripts=["journalabbrev/bin/journalabbrev"],
     long_description = README_TEXT,
@@ -18,8 +18,8 @@ setup(
     license="GPLv3",
     description="Abbreviates journal names inside in a given bibtex file",
     author="Bruno Messias",
-    author_email="contato@brunomessias.com",
-    download_url="https://github.com/devmessias/journalabbrev/archive/0.1.6.tar.gz",
+    author_email="messias.physics@gmail.com",
+    download_url="https://github.com/devmessias/journalabbrev/archive/0.1.7.tar.gz",
     keywords=["bibtex", "abbreviate", "science","scientific-journals"],
 
     classifiers=[
