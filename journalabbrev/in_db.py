@@ -1,5 +1,8 @@
+from __future__ import print_function
+from builtins import input
 from itertools import groupby
 import operator
+from functools import reduce
 
 
 def manual_update_in(bibs, db_abbrev):
@@ -10,7 +13,7 @@ def manual_update_in(bibs, db_abbrev):
     }
     question = "Replace '{}' for {}? y(yes)/n(no)/c(custom): "
     question = question.format(bibs[0]["journal"], bibs[0]["_text"])
-    action = raw_input(question)
+    action = input(question)
     try:
         return actions.get(action)()
     except TypeError:
@@ -19,7 +22,7 @@ def manual_update_in(bibs, db_abbrev):
 
 def update_in(bibs, db_abbrev, custom=False):
     if custom:
-        abbrev = raw_input("Insert abreviation:\n")
+        abbrev = input("Insert abreviation:\n")
         db_abbrev.update(
             bibs[0]["journal"],
             abbrev
@@ -35,18 +38,12 @@ def update_in(bibs, db_abbrev, custom=False):
 
 def update_bibs_in(grouped_bibs, db_abbrev):
     actions = {
-        "y": lambda items: map(
-            lambda bibs: update_in(bibs, db_abbrev),
-            items
-        ),
-        "m": lambda items: map(
-            lambda bibs: manual_update_in(bibs, db_abbrev),
-            items
-        ),
+        "y": lambda items: [update_in(bibs, db_abbrev) for bibs in items],
+        "m": lambda items: [manual_update_in(bibs, db_abbrev) for bibs in items],
         "n": lambda items: items
     }
-    print "\n "
-    action = raw_input("Abbreviate everthing?" +
+    print("\n ")
+    action = input("Abbreviate everthing?" +
                        "y(yes, automatic)/m(manual)/n(do nothing)")
     grouped_bibs.sort(key=operator.itemgetter('journal'))
     grouped_by_journal = []

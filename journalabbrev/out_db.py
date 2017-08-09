@@ -1,16 +1,19 @@
+from __future__ import print_function
+from builtins import input
 from itertools import groupby
 import operator
+from functools import reduce
 
 
 def update_out(bibs, db_abbrev):
-    is_abreviation = raw_input(
+    is_abreviation = input(
         "'{}' is a abreviation?y(yes)n(no): ".format(bibs[0]["journal"])
     )
     if is_abreviation == "y":
-        full_name = raw_input("Insert journal name:\n")
+        full_name = input("Insert journal name:\n")
         abreviation = bibs[0]["journal"]
     elif is_abreviation == "n":
-        abreviation = raw_input("Insert abreviation:\n")
+        abreviation = input("Insert abreviation:\n")
         full_name = bibs[0]["journal"]
     else:
         return update_out(bibs, db_abbrev)
@@ -21,8 +24,8 @@ def update_out(bibs, db_abbrev):
 
 
 def update_bibs_out(grouped_bibs, db_abbrev):
-    print "\nThe next items does not exist in database."
-    action = raw_input("Manually update your database?y(yes)/n(do nothing)")
+    print("\nThe next items does not exist in database.")
+    action = input("Manually update your database?y(yes)/n(do nothing)")
     if action == "n":
         return grouped_bibs
     elif action != "y":

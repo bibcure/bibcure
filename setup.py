@@ -6,11 +6,11 @@ readme.close()
 
 setup(
     name="journalabbrev",
-    version="0.1.4",
+    version="0.1.5",
     packages = find_packages(exclude=["build",]),
     scripts=["journalabbrev/bin/journalabbrev"],
     long_description = README_TEXT,
-    install_requires=["bibtexparser"],
+    install_requires=["bibtexparser", "future"],
     include_package_data=True,
     package_data={
         "data":["data/db_abbrev.json", "data/teste"]
@@ -19,7 +19,7 @@ setup(
     description="Abbreviates journal names inside in a given bibtex file",
     author="Bruno Messias",
     author_email="contato@brunomessias.com",
-    download_url="https://github.com/devmessias/journalabbrev/archive/0.1.4.tar.gz",
+    download_url="https://github.com/devmessias/journalabbrev/archive/0.1.5.tar.gz",
     keywords=["bibtex", "abbreviate", "science","scientific-journals"],
 
     classifiers=[

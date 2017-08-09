@@ -1,4 +1,4 @@
-#!/usr/bin/python2
+from __future__ import print_function
 import bibtexparser
 import argparse
 from itertools import groupby
@@ -44,7 +44,7 @@ def save_output_bib(updated_bibs, output_file):
     new_bibtex = BibDatabase()
     new_bibtex.entries = updated_bibs
     with open(output_file, 'w') as bibfile:
-        bibfile.write(writer.write(new_bibtex).encode("utf8"))
+        bibfile.write(writer.write(new_bibtex))
 
 
 def main():
@@ -74,7 +74,7 @@ def main():
     args = parser.parse_args()
     bibtex = bibtexparser.loads(args.input.read())
     if len(bibtex.entries) == 0:
-        print "Input File is empty or corrupted."
+        print("Input File is empty or corrupted.")
         sys.exit(1)
 
     pool = Pool()
@@ -87,14 +87,14 @@ def main():
         grouped_bibs_by_type[key] = list(items)
 
     updated_bibs = []
-    for key, bibs in grouped_bibs_by_type.iteritems():
+    for key, bibs in grouped_bibs_by_type.items():
         if len(bibs) > 0:
-            print "{:d} bibs are {}".format(
+            print("{:d} bibs >> {}".format(
                 len(bibs),
                 bibs[0]["_type"].replace("_", " ")
-            )
+            ))
 
-    for key, bibs in grouped_bibs_by_type.iteritems():
+    for key, bibs in grouped_bibs_by_type.items():
         if len(bibs) > 0:
             if "can_be_abbreviated" in bibs[0]["_type"]:
                 updated_bibs += update_bibs_in(bibs, db_abbrev)
