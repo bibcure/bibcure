@@ -1,3 +1,4 @@
+#!/usr/bib/env python
 from __future__ import print_function
 import bibtexparser
 import argparse
