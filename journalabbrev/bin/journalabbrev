@@ -12,7 +12,6 @@ from journalabbrev.in_db import update_bibs_in
 from journalabbrev.out_db import update_bibs_out
 from journalabbrev.database import Db_abbrev
 import textwrap
-
 db_abbrev = Db_abbrev()
 
 
@@ -105,7 +104,7 @@ def main():
                 updated_bibs += bibs
 
     for bib in updated_bibs:
-        if set(("_text", "_type")).issubset(bib) in bib:
+        if set(("_text", "_type")).issubset(bib):
             bib.pop("_text", None)
             bib.pop("_type", None)
 
