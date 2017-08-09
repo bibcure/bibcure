@@ -3,7 +3,6 @@
 #data, scrapped from web of science
 
 include journalabbrev/data/db_abbrev.json
-include journalabbrev/data/teste
 
 
-#include journalabbrev README.md
+include journalabbrev README.md
