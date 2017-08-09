@@ -14,7 +14,7 @@ def manual_update_in(bibs, db_abbrev):
     try:
         return actions.get(action)()
     except TypeError:
-        return manual_update_in(bibs)
+        return manual_update_in(bibs, db_abbrev)
 
 
 def update_in(bibs, db_abbrev, custom=False):
@@ -56,7 +56,7 @@ def update_bibs_in(grouped_bibs, db_abbrev):
     try:
         updated_bibs = actions.get(action)(grouped_by_journal)
     except TypeError:
-        return update_bibs_in(grouped_bibs)
+        return update_bibs_in(grouped_bibs, db_abbrev)
 
     updated_bibs = reduce(lambda a, b: a+b, updated_bibs)
     return updated_bibs

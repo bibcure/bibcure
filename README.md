@@ -1,5 +1,13 @@
 ## Install
 
+
+### pip
+
+```
+sudo pip install journalabbrev
+```
+
+### Source Code
 ```
 git clone https://github.com/devmessias/journal_name_abbreviations
 ```

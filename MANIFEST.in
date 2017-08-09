@@ -1,6 +1,9 @@
-include bibbreviate README.md
 
 
 #data, scrapped from web of science
 
-include static/db_abbrev.json
+include journalabbrev/data/db_abbrev.json
+include journalabbrev/data/teste
+
+
+#include journalabbrev README.md

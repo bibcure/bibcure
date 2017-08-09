@@ -1,0 +1,116 @@
+#!/usr/bin/python2
+import bibtexparser
+import argparse
+from itertools import groupby
+import operator
+from bibtexparser.bwriter import BibTexWriter
+from bibtexparser.bibdatabase import BibDatabase
+from multiprocessing import Pool
+import sys
+from journalabbrev.in_db import update_bibs_in
+from journalabbrev.out_db import update_bibs_out
+from journalabbrev.database import Db_abbrev
+import textwrap
+
+db_abbrev = Db_abbrev()
+
+
+def get_status(bib):
+    text = ""
+    state = "are_not_journal"
+
+    if "journal" in bib:
+        if "arxiv" in bib["journal"].lower():
+            text = ""
+            state = "are_arxiv"
+        else:
+            state = "are_out_db"
+            expanded_index = db_abbrev.get_index(bib["journal"], key="name")
+            abbrev_index = db_abbrev.get_index(bib["journal"], key="abbrev")
+            if expanded_index != -1:
+                text = db_abbrev.db[expanded_index]["abbrev"]
+                state = "can_be_abbreviated"
+            elif abbrev_index != -1:
+                text = db_abbrev.db[abbrev_index]["name"]
+                state = "can_be_expanded"
+    bib["_type"] = state
+    bib["_text"] = text
+
+    return bib
+
+
+def save_output_bib(updated_bibs, output_file):
+    writer = BibTexWriter()
+    new_bibtex = BibDatabase()
+    new_bibtex.entries = updated_bibs
+    with open(output_file, 'w') as bibfile:
+        bibfile.write(writer.write(new_bibtex).encode("utf8"))
+
+
+def main():
+    parser = argparse.ArgumentParser(
+        prog="journalabbreviation",
+        formatter_class=argparse.RawDescriptionHelpFormatter,
+        description=textwrap.dedent('''\
+        Abbreviate the names of journals within a bibtex file.
+        -----------------------------------------------------
+            @author: Bruno Messias
+            @email: messias.physics@gmail.com
+            @telegram: @bruno_messias
+            @github: https://github.com/devmessias/journalabbrev
+        ''')
+    )
+    parser.add_argument(
+        "--input", "-i",
+        required=True,
+        type=argparse.FileType("r"),
+        help="bibtex input file"
+    )
+    parser.add_argument(
+        "--output", "-o",
+        required=True,
+        help="bibtex output file")
+
+    args = parser.parse_args()
+    bibtex = bibtexparser.loads(args.input.read())
+    if len(bibtex.entries) == 0:
+        print "Input File is empty or corrupted."
+        sys.exit(1)
+
+    pool = Pool()
+    bibs = pool.map(get_status, bibtex.entries)
+    pool.close()
+    pool.join()
+    bibs.sort(key=operator.itemgetter('_type'))
+    grouped_bibs_by_type = {}
+    for key, items in groupby(bibs, lambda i: i["_type"]):
+        grouped_bibs_by_type[key] = list(items)
+
+    updated_bibs = []
+    for key, bibs in grouped_bibs_by_type.iteritems():
+        if len(bibs) > 0:
+            print "{:d} bibs are {}".format(
+                len(bibs),
+                bibs[0]["_type"].replace("_", " ")
+            )
+
+    for key, bibs in grouped_bibs_by_type.iteritems():
+        if len(bibs) > 0:
+            if "can_be_abbreviated" in bibs[0]["_type"]:
+                updated_bibs += update_bibs_in(bibs, db_abbrev)
+            elif "out_db" in bibs[0]["_type"]:
+                updated_bibs += update_bibs_out(bibs, db_abbrev)
+            else:
+                updated_bibs += bibs
+
+    for bib in updated_bibs:
+        if set(("_text", "_type")).issubset(bib) in bib:
+            bib.pop("_text", None)
+            bib.pop("_type", None)
+
+    save_output_bib(updated_bibs, args.output)
+    db_abbrev.close()
+
+
+if __name__ == "__main__":
+    main()

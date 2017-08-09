@@ -13,7 +13,7 @@ def update_out(bibs, db_abbrev):
         abreviation = raw_input("Insert abreviation:\n")
         full_name = bibs[0]["journal"]
     else:
-        return update_out(bibs)
+        return update_out(bibs, db_abbrev)
     db_abbrev.insert(full_name, abreviation)
     for i, bib in enumerate(bibs):
         bibs[i]["journal"] = abreviation
@@ -25,17 +25,13 @@ def update_bibs_out(grouped_bibs, db_abbrev):
     action = raw_input("Manually update your database?y(yes)/n(do nothing)")
     if action == "n":
         return grouped_bibs
-    elif action == "y":
-        grouped_bibs.sort(key=operator.itemgetter('journal'))
-        grouped_by_journal = []
+    elif action != "y":
+        return update_bibs_out(grouped_bibs, db_abbrev)
 
-        for key, items in groupby(grouped_bibs, lambda i: i["journal"]):
-            grouped_by_journal.append(list(items))
-            updated_bibs = map(
-                lambda bibs: update_out(bibs, db_abbrev),
-                grouped_by_journal
-            )
-        updated_bibs = reduce(lambda a, b: a+b, updated_bibs)
-        return updated_bibs
-    else:
-        return update_bibs_out(grouped_bibs)
+    grouped_bibs.sort(key=operator.itemgetter('journal'))
+    updated_bibs = []
+    for key, items in groupby(grouped_bibs, lambda i: i["journal"]):
+        updated_bibs.append(update_out(list(items), db_abbrev))
+
+    updated_bibs = reduce(lambda a, b: a+b, updated_bibs)
+    return updated_bibs
