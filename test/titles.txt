@@ -1,3 +1,0 @@
-Electronic structure and thermoelectric properties of bismuth telluride and bismuth selenide
-On the boundary conditions for the Dirac equation
-The anticommutator spin algebra, its representations and quantum group invariance

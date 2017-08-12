@@ -31,10 +31,10 @@ def update_bibs_out(grouped_bibs, db_abbrev):
     elif action != "y":
         return update_bibs_out(grouped_bibs, db_abbrev)
 
-    grouped_bibs.sort(key=operator.itemgetter('journal'))
-    updated_bibs = []
-    for key, items in groupby(grouped_bibs, lambda i: i["journal"]):
-        updated_bibs.append(update_out(list(items), db_abbrev))
+    # grouped_bibs.sort(key=operator.itemgetter('journal'))
+    # updated_bibs = []
+    # for key, items in groupby(grouped_bibs, lambda i: i["journal"]):
+        # updated_bibs.append(update_out(list(items), db_abbrev))
 
-    updated_bibs = reduce(lambda a, b: a+b, updated_bibs)
-    return updated_bibs
+    # updated_bibs = reduce(lambda a, b: a+b, updated_bibs)
+    # return updated_bibs

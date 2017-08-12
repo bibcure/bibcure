@@ -8,9 +8,10 @@ from bibtexparser.bwriter import BibTexWriter
 from bibtexparser.bibdatabase import BibDatabase
 from multiprocessing import Pool
 import sys
-from journalabbrev.in_db import update_bibs_in
-from journalabbrev.out_db import update_bibs_out
-from journalabbrev.database import Db_abbrev
+from bibcure.in_db import update_bibs_in
+from bibcure.out_db import update_bibs_out
+from bibcure.arxiv import update_bibs_arxiv
+from bibcure.database import Db_abbrev
 import textwrap
 db_abbrev = Db_abbrev()
 
@@ -113,6 +114,8 @@ def main():
                 updated_bibs += update_bibs_in(bibs, db_abbrev)
             elif "out_db" in bibs[0]["_type"]:
                 updated_bibs += update_bibs_out(bibs, db_abbrev)
+            elif "arxiv" in bibs[0]["_type"]:
+                updated_bibs += update_bibs_arxiv(bibs)
             else:
                 updated_bibs += bibs
 
@@ -120,7 +123,8 @@ def main():
         if set(("_text", "_type")).issubset(bib):
             bib.pop("_text", None)
             bib.pop("_type", None)
-
+        bib.pop("has_doi", None)
+        bib.pop("has_url", None)
     save_output_bib(updated_bibs, args.output)
     db_abbrev.close()
 
