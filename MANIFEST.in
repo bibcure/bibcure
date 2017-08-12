@@ -1,8 +1,6 @@
 
 
-#data, scrapped from web of science
-
-include journalabbrev/data/db_abbrev.json
+include bibcure/data/db_abbrev.json
 
 
-include journalabbrev README.md
+include bibcure README.md

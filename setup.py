@@ -5,10 +5,10 @@ README_TEXT = readme.read()
 readme.close()
 
 setup(
-    name="journalabbrev",
-    version="0.1.7",
+    name="bibcure",
+    version="0.1",
     packages = find_packages(exclude=["build",]),
-    scripts=["journalabbrev/bin/journalabbrev"],
+    scripts=["bibcure/bin/bibcure"],
     long_description = README_TEXT,
     install_requires=["bibtexparser", "future"],
     include_package_data=True,
@@ -19,7 +19,7 @@ setup(
     description="Abbreviates journal names inside in a given bibtex file",
     author="Bruno Messias",
     author_email="messias.physics@gmail.com",
-    download_url="https://github.com/devmessias/journalabbrev/archive/0.1.7.tar.gz",
+    download_url="https://github.com/devmessias/bibcure/archive/0.1.tar.gz",
     keywords=["bibtex", "abbreviate", "science","scientific-journals"],
 
     classifiers=[
@@ -29,5 +29,5 @@ setup(
         "Programming Language :: Python",
         "Topic :: Text Processing :: Markup :: LaTeX",
     ],
-    url="https://github.com/devmessias/journalabbrev"
+    url="https://github.com/devmessias/bibcure"
 )

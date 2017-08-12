@@ -35,6 +35,8 @@ def get_status(bib):
                 state = "can_be_expanded"
     bib["_type"] = state
     bib["_text"] = text
+    bib["has_doi"] = "doi" in bib
+    bib["has_url"] = "url" in bib
 
     return bib
 

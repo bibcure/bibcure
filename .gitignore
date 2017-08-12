@@ -11,9 +11,7 @@ __pycache__/
 env/
 develop-eggs/
 eggs/
-Journal_Abbreviation.egg-info/
-JournalAbbreviation.egg-info/
-journalabbrev.egg-info/
+bibcure.egg-info/
 dist/
 build/
 downloads/
