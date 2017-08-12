@@ -56,9 +56,10 @@ def update_bibs_arxiv(grouped_bibs):
     for key, items in groupby(grouped_bibs, lambda i: i["journal"]):
         grouped_by_journal.append(list(items))
 
-    try:
+    if action in ("a", "m", "n"):
         updated_bibs = actions.get(action)(grouped_by_journal)
-    except TypeError:
+
+    else:
         return update_bibs_arxiv(grouped_bibs)
 
     updated_bibs = reduce(lambda a, b: a+b, updated_bibs)

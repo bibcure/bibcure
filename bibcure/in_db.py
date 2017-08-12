@@ -44,15 +44,15 @@ def update_bibs_in(grouped_bibs, db_abbrev):
     }
     print("\n ")
     action = input("Abbreviate everthing?" +
-                       "y(yes, automatic)/m(manual)/n(do nothing)")
+                   "y(yes, automatic)/m(manual)/n(do nothing)")
     grouped_bibs.sort(key=operator.itemgetter('journal'))
     grouped_by_journal = []
     for key, items in groupby(grouped_bibs, lambda i: i["journal"]):
         grouped_by_journal.append(list(items))
 
-    try:
+    if action in ("a", "m", "n"):
         updated_bibs = actions.get(action)(grouped_by_journal)
-    except TypeError:
+    else:
         return update_bibs_in(grouped_bibs, db_abbrev)
 
     updated_bibs = reduce(lambda a, b: a+b, updated_bibs)
