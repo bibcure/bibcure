@@ -6,21 +6,21 @@ readme.close()
 
 setup(
     name="bibcure",
-    version="0.1",
+    version="0.2",
     packages = find_packages(exclude=["build",]),
     scripts=["bibcure/bin/bibcure"],
     long_description = README_TEXT,
-    install_requires=["bibtexparser", "future",
+    install_requires = ["bibtexparser", "future",
                       "doitobib", "titletobib", "arxivcheck"],
     include_package_data=True,
     package_data={
         "data":["data/db_abbrev.json", "data/teste"]
     },
     license="GPLv3",
-    description="Abbreviates journal names inside in a given bibtex file",
+    description=" Helps you to have a better bibtex file",
     author="Bruno Messias",
     author_email="messias.physics@gmail.com",
-    download_url="https://github.com/bibcure/bibcure/archive/0.1.tar.gz",
+    download_url="https://github.com/bibcure/bibcure/archive/0.2.tar.gz",
     keywords=["bibtex", "arxiv","doi", "abbreviate", "science","scientific-journals"],
 
     classifiers=[

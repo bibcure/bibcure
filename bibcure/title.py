@@ -4,7 +4,7 @@ from titletobib.crossref import get_bib_from_title
 import bibtexparser
 
 
-def update_doi(bib, get_first=True):
+def update_bib(bib, get_first=True):
     if "doi" not in bib and "title" in bib and "journal" in bib:
         if "arxiv" not in bib["journal"].lower():
             found, bib_string = get_bib_from_title(bib["title"], get_first)
@@ -14,15 +14,15 @@ def update_doi(bib, get_first=True):
 
 
 def update_bibs_get_doi(bibs):
-    action = input("Check if arxiv items are published?a(automatic)/m(manual)/n(do nothing)")
+    action = input("Try to get DOI?y(yes, automatic)/m(manual)/n(do nothing)")
 
-    if action not in ("a", "m", "n"):
+    if action not in ("y", "m", "n"):
         return update_bibs_get_doi(bibs)
 
     if action == "n":
         return bibs
 
-    get_first = True if action == "a" else False
+    get_first = True if action == "y" else False
 
     for i, bib in enumerate(bibs):
-        bibs[i] = update_doi(bib, get_first)
+        bibs[i] = update_bib(bib, get_first)

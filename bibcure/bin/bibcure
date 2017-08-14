@@ -1,18 +1,21 @@
 #!/usr/bib/env python
 from __future__ import print_function
+import sys
 import bibtexparser
-import argparse
-from itertools import groupby
-import operator
 from bibtexparser.bwriter import BibTexWriter
 from bibtexparser.bibdatabase import BibDatabase
+import argparse
+import operator
+import textwrap
+from itertools import groupby
 from multiprocessing import Pool
-import sys
 from bibcure.in_db import update_bibs_in
 from bibcure.out_db import update_bibs_out
 from bibcure.arxiv import update_bibs_arxiv
+from bibcure.title import update_bibs_get_doi
+from bibcure.doi import update_bibs_from_doi
 from bibcure.database import Db_abbrev
-import textwrap
+
 db_abbrev = Db_abbrev()
 
 
@@ -36,8 +39,6 @@ def get_status(bib):
                 state = "can_be_expanded"
     bib["_type"] = state
     bib["_text"] = text
-    bib["has_doi"] = "doi" in bib
-    bib["has_url"] = "url" in bib
 
     return bib
 
@@ -52,15 +53,15 @@ def save_output_bib(updated_bibs, output_file):
 
 def main():
     parser = argparse.ArgumentParser(
-        prog="journalabbreviation",
+        prog="bibcure",
         formatter_class=argparse.RawDescriptionHelpFormatter,
         description=textwrap.dedent('''\
-        Abbreviate the names of journals within a bibtex file.
+        You deserve a better bib file.
         -----------------------------------------------------
             @author: Bruno Messias
             @email: messias.physics@gmail.com
             @telegram: @bruno_messias
-            @github: https://github.com/devmessias/journalabbrev
+            @github: https://github.com/bibcure/bibcure
         ''')
     )
     parser.add_argument(
@@ -87,15 +88,22 @@ def main():
     parser = bibtexparser.bparser.BibTexParser()
     parser.alt_dict = dict_parser
     bibtex = bibtexparser.loads(args.input.read(), parser=parser)
-    if len(bibtex.entries) == 0:
+    bibs = bibtex.entries
+    if len(bibs) == 0:
         print("Input File is empty or corrupted.")
         sys.exit(1)
 
+    bibs = update_bibs_from_doi(bibs)
+    bibs = update_bibs_arxiv(bibs)
+    bibs = update_bibs_get_doi(bibs)
+
     pool = Pool()
-    bibs = pool.map(get_status, bibtex.entries)
+    bibs = pool.map(get_status, bibs)
     pool.close()
     pool.join()
+
     bibs.sort(key=operator.itemgetter('_type'))
+
     grouped_bibs_by_type = {}
     for key, items in groupby(bibs, lambda i: i["_type"]):
         grouped_bibs_by_type[key] = list(items)
@@ -114,8 +122,6 @@ def main():
                 updated_bibs += update_bibs_in(bibs, db_abbrev)
             elif "out_db" in bibs[0]["_type"]:
                 updated_bibs += update_bibs_out(bibs, db_abbrev)
-            elif "arxiv" in bibs[0]["_type"]:
-                updated_bibs += update_bibs_arxiv(bibs)
             else:
                 updated_bibs += bibs
 
@@ -123,8 +129,6 @@ def main():
         if set(("_text", "_type")).issubset(bib):
             bib.pop("_text", None)
             bib.pop("_type", None)
-        bib.pop("has_doi", None)
-        bib.pop("has_url", None)
     save_output_bib(updated_bibs, args.output)
     db_abbrev.close()
 

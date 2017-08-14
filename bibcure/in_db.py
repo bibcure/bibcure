@@ -50,7 +50,7 @@ def update_bibs_in(grouped_bibs, db_abbrev):
     for key, items in groupby(grouped_bibs, lambda i: i["journal"]):
         grouped_by_journal.append(list(items))
 
-    if action in ("a", "m", "n"):
+    if action in ("y", "m", "n"):
         updated_bibs = actions.get(action)(grouped_by_journal)
     else:
         return update_bibs_in(grouped_bibs, db_abbrev)
