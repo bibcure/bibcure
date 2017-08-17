@@ -19,10 +19,9 @@ def update_bibs_get_doi(bibs):
     if action not in ("y", "m", "n"):
         return update_bibs_get_doi(bibs)
 
-    if action == "n":
-        return bibs
+    if action != "n":
+        get_first = True if action == "y" else False
+        for i, bib in enumerate(bibs):
+            bibs[i] = update_bib(bib, get_first)
 
-    get_first = True if action == "y" else False
-
-    for i, bib in enumerate(bibs):
-        bibs[i] = update_bib(bib, get_first)
+    return bibs

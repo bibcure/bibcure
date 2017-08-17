@@ -17,7 +17,7 @@ def update_bib(bib_arxiv, automatic=True):
             bib = bib.entries[0]
         else:
             question = "{} >> {} ".format(arxiv_title,
-                                              bib.entries[0]["title"])
+                                          bib.entries[0]["title"])
             question += " was "
             if not published:
                 question += " not published. Use bib from arxiv?y/n"
@@ -44,14 +44,12 @@ def update_bibs_arxiv(bibs):
 
     if action not in ("a", "m", "n"):
         return update_bibs_arxiv(bibs)
+    if action != "n":
 
-    if action == "n":
-        return bibs
-
-    automatic = True if action == "a" else False
-    for i, bib in enumerate(bibs):
-        if "jounral" in bib:
-            if "arxiv" in bib["journal"].lower():
-                bibs[i] = update_bib(bib, automatic)
+        automatic = True if action == "a" else False
+        for i, bib in enumerate(bibs):
+            if "jounral" in bib:
+                if "arxiv" in bib["journal"].lower():
+                    bibs[i] = update_bib(bib, automatic)
 
     return bibs

@@ -1,5 +1,11 @@
+## Description
 
-## Features
+## Install
+
+```
+$ pip install bibcure
+```
+## Features and how to use
 
 ### Implemented
 
@@ -48,3 +54,4 @@ Given a bib file...
 DOI field
 * complete all fields(url, journal, etc) of all bib items using DOI number
 * abbreviate jorunal's names in a given bibtex file
+* contract authors name
