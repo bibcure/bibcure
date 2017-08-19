@@ -1,5 +1,7 @@
 ## Description
 
+
+![](https://raw.githubusercontent.com/bibcure/logo/master/logo_64x64.png) Bibcure helps in boring tasks by keeping your bibfile up to date and normalized.
 ## Install
 
 ```
