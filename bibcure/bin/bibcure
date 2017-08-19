@@ -94,8 +94,8 @@ def main():
         sys.exit(1)
 
     bibs = update_bibs_from_doi(bibs)
-    bibs = update_bibs_arxiv(bibs)
     bibs = update_bibs_get_doi(bibs)
+    bibs = update_bibs_arxiv(bibs)
 
     pool = Pool()
     bibs = pool.map(get_status, bibs)
@@ -109,21 +109,21 @@ def main():
         grouped_bibs_by_type[key] = list(items)
 
     updated_bibs = []
-    for key, bibs in grouped_bibs_by_type.items():
-        if len(bibs) > 0:
+    for key, bibs_items in grouped_bibs_by_type.items():
+        if len(bibs_items) > 0:
             print("{:d} bibs >> {}".format(
-                len(bibs),
-                bibs[0]["_type"].replace("_", " ")
+                len(bibs_items),
+                bibs_items[0]["_type"].replace("_", " ")
             ))
 
-    for key, bibs in grouped_bibs_by_type.items():
-        if len(bibs) > 0:
-            if "can_be_abbreviated" in bibs[0]["_type"]:
-                updated_bibs += update_bibs_in(bibs, db_abbrev)
-            elif "out_db" in bibs[0]["_type"]:
-                updated_bibs += update_bibs_out(bibs, db_abbrev)
+    for key, bibs_items in grouped_bibs_by_type.items():
+        if len(bibs_items) > 0:
+            if "can_be_abbreviated" in bibs_items[0]["_type"]:
+                updated_bibs += update_bibs_in(bibs_items, db_abbrev)
+            elif "out_db" in bibs_items[0]["_type"]:
+                updated_bibs += update_bibs_out(bibs_items, db_abbrev)
             else:
-                updated_bibs += bibs
+                updated_bibs += bibs_items
 
     for bib in updated_bibs:
         if set(("_text", "_type")).issubset(bib):

@@ -6,11 +6,10 @@ import bibtexparser
 
 def update_bib(bib, get_first=True):
     bib_id = bib["ID"]
-    if "doi" not in bib and "title" in bib and "journal" in bib:
-        if "arxiv" not in bib["journal"].lower():
-            found, bib_string = get_bib_from_title(bib["title"], get_first)
-            if found:
-                bib = bibtexparser.loads(bib_string).entries[0]
+    if "doi" not in bib and "title" in bib:
+        found, bib_string = get_bib_from_title(bib["title"], get_first)
+        if found:
+            bib = bibtexparser.loads(bib_string).entries[0]
     bib["ID"] = bib_id
     return bib
 
@@ -24,6 +23,10 @@ def update_bibs_get_doi(bibs):
     if action != "n":
         get_first = True if action == "y" else False
         for i, bib in enumerate(bibs):
-            bibs[i] = update_bib(bib, get_first)
+            if "journal" in bib:
+                if "arxiv" not in bib["journal"].lower():
+                    bibs[i] = update_bib(bib, get_first)
+            else:
+                    bibs[i] = update_bib(bib, get_first)
 
     return bibs
