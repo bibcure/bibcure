@@ -11,7 +11,6 @@ def update_bib(bib_arxiv, automatic=True):
     found, published, bib_string = check_arxiv_published(arxiv_id,
                                                          abbrev_journal=False)
     bib = bibtexparser.loads(bib_string)
-
     if found:
         if automatic:
             bib = bib.entries[0]
@@ -40,15 +39,15 @@ def update_bib(bib_arxiv, automatic=True):
 
 
 def update_bibs_arxiv(bibs):
-    action = input("Check if arxiv items are published?a(automatic)/m(manual)/n(do nothing)")
+    action = input("Check if arxiv items are published?y(yes, automatic)/m(manual)/n(do nothing)")
 
-    if action not in ("a", "m", "n"):
+    if action not in ("y", "m", "n"):
         return update_bibs_arxiv(bibs)
     if action != "n":
 
-        automatic = True if action == "a" else False
+        automatic = True if action == "y" else False
         for i, bib in enumerate(bibs):
-            if "jounral" in bib:
+            if "journal" in bib:
                 if "arxiv" in bib["journal"].lower():
                     bibs[i] = update_bib(bib, automatic)
 
