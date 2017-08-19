@@ -16,7 +16,7 @@ def update_bib(bib):
 
 
 def update_bibs_from_doi(bibs):
-    action = input("Update bibs from doi?y(yes)/n(do nothing)")
+    action = input("Update bibs using DOI field?y(yes)/n(do nothing)")
 
     if action not in ("y", "n"):
         return update_bibs_from_doi(bibs)

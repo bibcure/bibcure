@@ -42,7 +42,7 @@ def update_bib(bib_arxiv, automatic=True):
 
 
 def update_bibs_arxiv(bibs):
-    action = input("Check if arxiv items are published?y(yes, automatic)/m(manual)/n(do nothing)")
+    action = input("Check if arxiv have been published?y(yes, automatic)/m(manual)/n(do nothing)")
 
     if action not in ("y", "m", "n"):
         return update_bibs_arxiv(bibs)

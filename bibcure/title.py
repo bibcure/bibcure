@@ -15,7 +15,7 @@ def update_bib(bib, get_first=True):
 
 
 def update_bibs_get_doi(bibs):
-    action = input("Try to get DOI?y(yes, automatic)/m(manual)/n(do nothing)")
+    action = input("Get DOI absent using the title?y(yes, automatic)/m(manual)/n(do nothing)")
 
     if action not in ("y", "m", "n"):
         return update_bibs_get_doi(bibs)
