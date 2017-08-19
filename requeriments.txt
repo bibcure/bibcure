@@ -1,0 +1,6 @@
+bibtexparser
+future
+doitobib
+titletobib
+arxivcheck
+
