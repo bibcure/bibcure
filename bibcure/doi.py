@@ -5,10 +5,13 @@ import bibtexparser
 
 
 def update_bib(bib):
+    bib_id = bib["ID"]
     if "doi" in bib:
             found, bib_string = get_bib_from_doi(bib["doi"])
             if found:
                 bib = bibtexparser.loads(bib_string).entries[0]
+
+    bib["ID"] = bib_id
     return bib
 
 

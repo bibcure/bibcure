@@ -5,6 +5,8 @@ import bibtexparser
 
 
 def update_bib(bib_arxiv, automatic=True):
+    bib_id = bib_arxiv["ID"]
+
     arxiv_id = bib_arxiv["journal"].partition(":")[2]
     arxiv_title = bib_arxiv["title"]
 
@@ -35,6 +37,7 @@ def update_bib(bib_arxiv, automatic=True):
             arxiv_id
         ))
 
+    bib["ID"] = bib_id
     return bib
 
 
@@ -50,5 +53,4 @@ def update_bibs_arxiv(bibs):
             if "journal" in bib:
                 if "arxiv" in bib["journal"].lower():
                     bibs[i] = update_bib(bib, automatic)
-
     return bibs

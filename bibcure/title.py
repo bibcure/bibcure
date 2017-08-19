@@ -5,11 +5,13 @@ import bibtexparser
 
 
 def update_bib(bib, get_first=True):
+    bib_id = bib["ID"]
     if "doi" not in bib and "title" in bib and "journal" in bib:
         if "arxiv" not in bib["journal"].lower():
             found, bib_string = get_bib_from_title(bib["title"], get_first)
             if found:
                 bib = bibtexparser.loads(bib_string).entries[0]
+    bib["ID"] = bib_id
     return bib
 
 
