@@ -6,7 +6,7 @@ readme.close()
 
 setup(
     name="bibcure",
-    version="0.2.1",
+    version="0.2.2",
     packages = find_packages(exclude=["build",]),
     scripts=["bibcure/bin/bibcure"],
     long_description = README_TEXT,
@@ -20,11 +20,10 @@ setup(
     description=" Helps you to have a better bibtex file",
     author="Bruno Messias",
     author_email="messias.physics@gmail.com",
-    download_url="https://github.com/bibcure/bibcure/archive/0.2.1.tar.gz",
-    keywords=["bibtex", "arxiv","doi", "abbreviate", "science","scientific-journals"],
+    download_url="https://github.com/bibcure/bibcure/archive/0.2.2.tar.gz",
+    keywords=["bibtex", "arxiv", "doi", "abbreviate", "science","scientific-journals"],
 
     classifiers=[
-        "Development Status :: 4 - Beta",
         "License :: OSI Approved :: GNU General Public License v3 (GPLv3)",
         "Intended Audience :: Science/Research",
         "Programming Language :: Python",
