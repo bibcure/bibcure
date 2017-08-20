@@ -13,10 +13,11 @@ $ sudo pip install bibcure
 ```
 ## Features and how to use
 
+#### bibcure
+Given a bib file...
 ```
 $ bibcure -i input.bib -o output.bib
 ```
-Given a bib file...
 * check sure the Arxiv items have been published, then update them(requires
 internet connection)
 * complete all fields(url, journal, etc) of all bib items using DOI number(requires
@@ -25,25 +26,56 @@ internet connection)
 DOI field(requires
 internet connection)
 * abbreviate jorunals names
+
+#### doitobib
+Given a DOI number...
 ```
 $ doitobib 10.1038/s41524-017-0032-0
 ```
-Given a DOI number...
 * get bib item given a doi(requires
 internet connection)
 
+You can easily append
+a bib into a bibfile, just do
+```
+$ doitobib 10.1038/s41524-017-0032-0 >> file.bib
+```
+#### titletobib
+Given a title...
 ```
 $ titletobib An useful paper
 ```
-Given a title...
 * search papers related and return a bib for the selected paper(requires
 internet connection)
+
+You can easily append
+a bib into a bibfile, just do
+```
+$ titletobib An useful paper --first >> file.bib
+```
+#### arxivcheck
+
+
+Given a arxiv id...
 ```
 $ arxivcheck 1601.02785
 ```
-Given a arxiv id...
-* given an arixiv id, check if has been published, and then returns the updated bib (requires internet connection)
+* check if has been published, and then returns the updated bib (requires internet connection)
 
+
+Given a title...
+```
+$ arxivcheck --title An useful paper published on arxiv
+```
+search papers related and return a bib the first item. 
+You can easily append a bib into a bibfile, just do
+```
+$ arxivcheck --title An useful paper published on arxiv >> file.bib
+```
+You also can interact with results, just pass --ask parameter
+```
+$ arxivcheck --ask --title An useful paper published on arxiv 
+```
 ### Next Version
 ```
 $ bibcure -i input.bib -o output.bib
