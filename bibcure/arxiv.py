@@ -10,8 +10,10 @@ def update_bib(bib_arxiv, automatic=True):
     arxiv_id = bib_arxiv["journal"].partition(":")[2]
     arxiv_title = bib_arxiv["title"]
 
-    found, published, bib_string = check_arxiv_published(arxiv_id,
-                                                         abbrev_journal=False)
+    found, published, bib_string = check_arxiv_published(
+        arxiv_id,
+        field="id"
+    )
     bib = bibtexparser.loads(bib_string)
     if found:
         if automatic:
@@ -23,8 +25,7 @@ def update_bib(bib_arxiv, automatic=True):
             if not published:
                 question += " not published. Use bib from arxiv?y/n"
             else:
-                question += " published in "
-                question += "{}.".format(bib.entries[0]["journal"])
+                question += " published."
                 question += " Replace with new bib ?y/n"
 
             replace = input(question)
