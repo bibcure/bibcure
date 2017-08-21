@@ -11,6 +11,18 @@ Bibcure uses the wonderful [Bibtex parser](https://github.com/sciunto-org/python
 ```
 $ sudo pip install bibcure
 ```
+
+If you want download articles via a DOI number, article title or a bibtex file, using the
+database of libgen(sci-hub), see
+
+["bibcure/sci2pdf"]("https://github.com/bibcure/sci2pdf")
+
+or just do
+
+```
+$ sudo pip install sci2pdf
+```
+
 ## Features and how to use
 
 #### bibcure

@@ -16,6 +16,17 @@ Install
 
     $ sudo pip install bibcure
 
+If you want download articles via a DOI number, article title or a
+bibtex file, using the database of libgen(sci-hub), see
+
+`"bibcure/sci2pdf" <>`__
+
+or just do
+
+::
+
+    $ sudo pip install sci2pdf
+
 Features and how to use
 -----------------------
 
