@@ -42,7 +42,7 @@ DOI field(requires
 internet connection)
 * abbreviate jorunals names
 
-#### doitobib
+#### doi2bib
 
 Given a DOI number...
 ```
@@ -57,7 +57,7 @@ a bib into a bibfile, just do
 $ doi2bib 10.1038/s41524-017-0032-0 >> file.bib
 ```
 
-#### titletobib
+#### title2bib
 
 Given a title...
 ```
