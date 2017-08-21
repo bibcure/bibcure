@@ -12,10 +12,12 @@ Bibcure uses the wonderful [Bibtex parser](https://github.com/sciunto-org/python
 $ sudo pip install bibcure
 ```
 
+### Sci-Hub to PDF
+
 If you want download articles via a DOI number, article title or a bibtex file, using the
 database of libgen(sci-hub), see
 
-["bibcure/sci2pdf"]("https://github.com/bibcure/sci2pdf")
+[bibcure/sci2pdf](https://github.com/bibcure/sci2pdf)
 
 or just do
 
@@ -26,6 +28,7 @@ $ sudo pip install sci2pdf
 ## Features and how to use
 
 #### bibcure
+
 Given a bib file...
 ```
 $ bibcure -i input.bib -o output.bib
@@ -40,6 +43,7 @@ internet connection)
 * abbreviate jorunals names
 
 #### doitobib
+
 Given a DOI number...
 ```
 $ doi2bib 10.1038/s41524-017-0032-0
@@ -52,7 +56,9 @@ a bib into a bibfile, just do
 ```
 $ doi2bib 10.1038/s41524-017-0032-0 >> file.bib
 ```
+
 #### titletobib
+
 Given a title...
 ```
 $ title2bib An useful paper
@@ -65,6 +71,7 @@ a bib into a bibfile, just do
 ```
 $ title2bib An useful paper --first >> file.bib
 ```
+
 #### arxivcheck
 
 
@@ -88,9 +95,38 @@ You also can interact with results, just pass --ask parameter
 ```
 $ arxivcheck --ask --title An useful paper published on arxiv 
 ```
+
 ### Next Version
+
 ```
 $ bibcure -i input.bib -o output.bib
 ```
 * contract authors names
+
+
+### sci2pdf
+
+Downloads pdfs via a DOI number, article title or a bibtex file, using the
+database of libgen(sci-hub).
+
+* given a bibtex file
+```
+$ sci2pdf -i input.bib 
+```
+
+* given a DOI number...
+```
+$ sci2pdf 10.1038/s41524-017-0032-0
+```
+
+* given a title...
+```
+$ sci2bib --title An useful paper
+```
+
+* location folder as argument
+```
+$ sci2pdf -i input.bib -l somefoler/
+```
+
 
