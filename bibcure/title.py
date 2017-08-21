@@ -1,6 +1,6 @@
 from __future__ import print_function
 from builtins import input
-from titletobib.crossref import get_bib_from_title
+from title2bib.crossref import get_bib_from_title
 import bibtexparser
 
 

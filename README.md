@@ -42,7 +42,7 @@ internet connection)
 #### doitobib
 Given a DOI number...
 ```
-$ doitobib 10.1038/s41524-017-0032-0
+$ doi2bib 10.1038/s41524-017-0032-0
 ```
 * get bib item given a doi(requires
 internet connection)
@@ -50,12 +50,12 @@ internet connection)
 You can easily append
 a bib into a bibfile, just do
 ```
-$ doitobib 10.1038/s41524-017-0032-0 >> file.bib
+$ doi2bib 10.1038/s41524-017-0032-0 >> file.bib
 ```
 #### titletobib
 Given a title...
 ```
-$ titletobib An useful paper
+$ title2bib An useful paper
 ```
 * search papers related and return a bib for the selected paper(requires
 internet connection)
@@ -63,7 +63,7 @@ internet connection)
 You can easily append
 a bib into a bibfile, just do
 ```
-$ titletobib An useful paper --first >> file.bib
+$ title2bib An useful paper --first >> file.bib
 ```
 #### arxivcheck
 

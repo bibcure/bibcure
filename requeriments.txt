@@ -1,6 +1,6 @@
 bibtexparser
 future
-doitobib
-titletobib
+doi2bib
+title2bib
 arxivcheck
 
