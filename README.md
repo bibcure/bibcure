@@ -1,7 +1,7 @@
 # Description
 
 
-![](https://raw.githubusercontent.com/bibcure/logo/master/logo_64x64.png) Bibcure helps in boring tasks by keeping your bibfile up to date and normalized.
+![](https://raw.githubusercontent.com/bibcure/logo/master/logo_64x64.png)  Bibcure helps in boring tasks by keeping your bibfile up to date and normalized.
 
 ##  Requirements
 
@@ -14,9 +14,8 @@ $ sudo pip install bibcure
 ```
 
 
-## scihub2pdf
-
-If you want download articles via a DOI number, article title or a bibtex file, using the
+## scihub2pdf(beta)
+![](https://raw.githubusercontent.com/bibcure/logo/master/sci_hub_64.png)   If you want download articles via a DOI number, article title or a bibtex file, using the
 database of libgen or sci-hub, see
 
 [bibcure/scihub2pdf](https://github.com/bibcure/scihub2pdf)
