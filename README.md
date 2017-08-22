@@ -1,33 +1,35 @@
-## Description
+# Description
 
 
 ![](https://raw.githubusercontent.com/bibcure/logo/master/logo_64x64.png) Bibcure helps in boring tasks by keeping your bibfile up to date and normalized.
 
-###  Requirements
+##  Requirements
 
 Bibcure uses the wonderful [Bibtex parser](https://github.com/sciunto-org/python-bibtexparser). In this moment we waiting for new release of bibtexparser to solve some bugs.
-## Install
+
+# Install
 
 ```
 $ sudo pip install bibcure
 ```
 
-### Sci-Hub to PDF
+
+## scihub2pdf
 
 If you want download articles via a DOI number, article title or a bibtex file, using the
-database of libgen(sci-hub), see
+database of libgen or sci-hub, see
 
-[bibcure/sci2pdf](https://github.com/bibcure/sci2pdf)
+[bibcure/scihub2pdf](https://github.com/bibcure/scihub2pdf)
 
 or just do
 
 ```
-$ sudo pip install sci2pdf
+$ sudo pip install scihub2pdf
 ```
 
-## Features and how to use
+# Features and how to use
 
-#### bibcure
+## bibcure
 
 Given a bib file...
 ```
@@ -42,7 +44,7 @@ DOI field(requires
 internet connection)
 * abbreviate jorunals names
 
-#### doi2bib
+## doi2bib
 
 Given a DOI number...
 ```
@@ -57,7 +59,7 @@ a bib into a bibfile, just do
 $ doi2bib 10.1038/s41524-017-0032-0 >> file.bib
 ```
 
-#### title2bib
+## title2bib
 
 Given a title...
 ```
@@ -72,7 +74,7 @@ a bib into a bibfile, just do
 $ title2bib An useful paper --first >> file.bib
 ```
 
-#### arxivcheck
+## arxivcheck
 
 
 Given a arxiv id...
@@ -96,37 +98,49 @@ You also can interact with results, just pass --ask parameter
 $ arxivcheck --ask --title An useful paper published on arxiv 
 ```
 
-### Next Version
+# scihub2pdf
+
+Given a bibtex file
 
 ```
-$ bibcure -i input.bib -o output.bib
-```
-* contract authors names
-
-
-### sci2pdf
-
-Downloads pdfs via a DOI number, article title or a bibtex file, using the
-database of libgen(sci-hub).
-
-* given a bibtex file
-```
-$ sci2pdf -i input.bib 
+$ scihub2pdf -i input.bib 
 ```
 
-* given a DOI number...
+Given a DOI number...
+
 ```
-$ sci2pdf 10.1038/s41524-017-0032-0
+$ scihub2pdf 10.1038/s41524-017-0032-0
 ```
 
-* given a title...
+Given a title...
+
 ```
 $ sci2bib --title An useful paper
 ```
+Location folder as argument
 
-* location folder as argument
 ```
-$ sci2pdf -i input.bib -l somefoler/
+$ scihub2pdf -i input.bib -l somefoler/
 ```
 
+Use libgen instead sci-hub
+
+```
+$ scihub2pdf -i input.bib --uselibgen
+```
+
+## Sci-Hub vs LibGen
+
+### Sci-hub:
+
+- Stable
+- Annoying CAPTCHA
+- Fast
+
+
+### Libgen
+
+- Unstalbe
+- No CAPTCHA
+- Slow
 
