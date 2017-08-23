@@ -57,7 +57,10 @@ a bib into a bibfile, just do
 ```
 $ doi2bib 10.1038/s41524-017-0032-0 >> file.bib
 ```
-
+You also can generate a bibtex from a txt file containing a list of DOIs
+```
+$ doi2bib --input file_with_dois.txt --output refs.bib
+```
 ## title2bib
 
 Given a title...
@@ -72,9 +75,12 @@ a bib into a bibfile, just do
 ```
 $ title2bib An useful paper --first >> file.bib
 ```
+You also can generate a bibtex from a txt file containing a list of "titles"
+```
+$ title2bib --input file_with_titles.txt --output refs.bib --first
+```
 
 ## arxivcheck
-
 
 Given a arxiv id...
 ```
@@ -114,7 +120,7 @@ $ scihub2pdf 10.1038/s41524-017-0032-0
 Given a title...
 
 ```
-$ sci2bib --title An useful paper
+$ scihub2bib --title An useful paper
 ```
 Location folder as argument
 
