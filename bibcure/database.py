@@ -8,14 +8,15 @@ import bisect
 # import pdb
 
 home_path = os.path.expanduser("~")
-config_file = home_path+"/.journalabbrev/db.json"
+config_file = home_path+"/.bibcure/db.json"
 config_file_exists = os.path.exists(config_file)
 
 if config_file_exists:
     db_path = config_file
 else:
-    db_path = pkg_resources.resource_filename("journalabbrev",
-                                              "data/db_abbrev.json")
+    db_path = pkg_resources.resource_filename("bibcure",
+
+                                  "data/db_abbrev.json")
 
 
 class Db_abbrev(object):
