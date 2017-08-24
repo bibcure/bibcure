@@ -18,11 +18,11 @@ Install
 
     $ sudo pip install bibcure
 
-scihub2pdf
-----------
+scihub2pdf(beta)
+----------------
 
-If you want download articles via a DOI number, article title or a
-bibtex file, using the database of libgen or sci-hub, see
+|image1| If you want download articles via a DOI number, article title
+or a bibtex file, using the database of libgen or sci-hub, see
 
 `bibcure/scihub2pdf <https://github.com/bibcure/scihub2pdf>`__
 
@@ -169,3 +169,4 @@ Libgen
 -  Slow
 
 .. |image0| image:: https://raw.githubusercontent.com/bibcure/logo/master/logo_64x64.png
+.. |image1| image:: https://raw.githubusercontent.com/bibcure/logo/master/sci_hub_64.png

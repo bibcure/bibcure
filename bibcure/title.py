@@ -2,6 +2,7 @@ from __future__ import print_function
 from builtins import input
 from title2bib.crossref import get_bib_from_title
 import bibtexparser
+import pdb
 
 
 def update_bib(bib, get_first=True):
@@ -23,10 +24,6 @@ def update_bibs_get_doi(bibs):
     if action != "n":
         get_first = True if action == "y" else False
         for i, bib in enumerate(bibs):
-            if "journal" in bib:
-                if "arxiv" not in bib["journal"].lower():
-                    bibs[i] = update_bib(bib, get_first)
-            else:
-                    bibs[i] = update_bib(bib, get_first)
+            bibs[i] = update_bib(bib, get_first)
 
     return bibs

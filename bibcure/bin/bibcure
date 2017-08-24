@@ -15,7 +15,7 @@ from bibcure.arxiv import update_bibs_arxiv
 from bibcure.title import update_bibs_get_doi
 from bibcure.doi import update_bibs_from_doi
 from bibcure.database import Db_abbrev
-
+import pdb
 db_abbrev = Db_abbrev()
 
 
@@ -47,8 +47,14 @@ def save_output_bib(updated_bibs, output_file):
     writer = BibTexWriter()
     new_bibtex = BibDatabase()
     new_bibtex.entries = updated_bibs
-    with open(output_file, 'w') as bibfile:
-        bibfile.write(writer.write(new_bibtex))
+    bibtex_string = writer.write(new_bibtex)
+    try:
+        with open(output_file, 'w') as bibfile:
+            bibfile.write(bibtex_string)
+    except TypeError:
+        print("Can't save in output file\n")
+        print("Updated BibFile:\n")
+        print(bibtex_string)
 
 
 def main():
