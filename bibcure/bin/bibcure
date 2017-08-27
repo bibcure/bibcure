@@ -16,6 +16,7 @@ from bibcure.title import update_bibs_get_doi
 from bibcure.doi import update_bibs_from_doi
 from bibcure.database import Db_abbrev
 import sys
+import io
 
 pyversion = sys.version_info[0]
 db_abbrev = Db_abbrev()
@@ -52,11 +53,12 @@ def save_output_bib(updated_bibs, output_file):
     new_bibtex.entries = updated_bibs
     bibtex_string = writer.write(new_bibtex)
     try:
-        with open(output_file, 'w') as bibfile:
+        with io.open(output_file, 'w', encoding = "utf-8") as bibfile:
             if pyversion == 2:
                 bibfile.write(bibtex_string.encode("utf8"))
             else:
                 bibfile.write(bibtex_string)
+
     except TypeError:
         print("Can't save in output file\n")
         print("Updated BibFile:\n")
@@ -110,7 +112,6 @@ def main():
     parser.add_argument(
         "--input", "-i",
         required=True,
-        type=argparse.FileType("r"),
         help="bibtex input file"
     )
     parser.add_argument(
@@ -130,7 +131,9 @@ def main():
         'authors': 'author'}
     parser = bibtexparser.bparser.BibTexParser()
     parser.alt_dict = dict_parser
-    bibtex = bibtexparser.loads(args.input.read(), parser=parser)
+    inputfile = args.input
+    with io.open(inputfile, "r", encoding = "utf-8") as inputfile:
+        bibtex = bibtexparser.loads(inputfile.read(), parser=parser)
     bibs = bibtex.entries
     if len(bibs) == 0:
         print("Input File is empty or corrupted.")
