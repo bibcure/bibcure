@@ -1,6 +1,5 @@
 #!/usr/bib/env python
 from __future__ import unicode_literals, print_function, absolute_import
-import sys
 import bibtexparser
 from bibtexparser.bwriter import BibTexWriter
 from bibtexparser.bibdatabase import BibDatabase
@@ -15,10 +14,8 @@ from bibcure.arxiv import update_bibs_arxiv
 from bibcure.title import update_bibs_get_doi
 from bibcure.doi import update_bibs_from_doi
 from bibcure.database import Db_abbrev
-import sys
 import io
 
-pyversion = sys.version_info[0]
 db_abbrev = Db_abbrev()
 
 
@@ -53,11 +50,8 @@ def save_output_bib(updated_bibs, output_file):
     new_bibtex.entries = updated_bibs
     bibtex_string = writer.write(new_bibtex)
     try:
-        with io.open(output_file, 'w', encoding = "utf-8") as bibfile:
-            if pyversion == 2:
-                bibfile.write(bibtex_string.encode("utf8"))
-            else:
-                bibfile.write(bibtex_string)
+        with io.open(output_file, 'w', encoding="utf-8") as bibfile:
+            bibfile.write(bibtex_string)
 
     except TypeError:
         print("Can't save in output file\n")
@@ -132,12 +126,12 @@ def main():
     parser = bibtexparser.bparser.BibTexParser()
     parser.alt_dict = dict_parser
     inputfile = args.input
-    with io.open(inputfile, "r", encoding = "utf-8") as inputfile:
+    with io.open(inputfile, "r", encoding="utf-8") as inputfile:
         bibtex = bibtexparser.loads(inputfile.read(), parser=parser)
     bibs = bibtex.entries
     if len(bibs) == 0:
         print("Input File is empty or corrupted.")
-        sys.exit(1)
+        return
 
     bibs = update_bibs_from_doi(bibs)
     bibs = update_bibs_get_doi(bibs)
