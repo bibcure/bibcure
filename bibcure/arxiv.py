@@ -41,8 +41,6 @@ def update_bib(bib_arxiv, automatic=True, i=0):
         ))
         bib = bib_arxiv
 
-    for i in bib.keys():
-        print(type(bib[i]))
     return bib
 
 
