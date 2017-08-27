@@ -1,4 +1,5 @@
-from __future__ import print_function
+from __future__ import unicode_literals, print_function, absolute_import
+
 from builtins import map
 from builtins import object
 import json

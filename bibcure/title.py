@@ -1,8 +1,7 @@
-from __future__ import print_function
+from __future__ import unicode_literals, print_function, absolute_import
 from builtins import input
 from title2bib.crossref import get_bib_from_title
 import bibtexparser
-import pdb
 
 
 def update_bib(bib, get_first=True):

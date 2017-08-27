@@ -1,10 +1,11 @@
-from __future__ import print_function
+from __future__ import unicode_literals, print_function, absolute_import
+
 from builtins import input
 from arxivcheck.arxiv import check_arxiv_published
 import bibtexparser
 
 
-def update_bib(bib_arxiv, automatic=True):
+def update_bib(bib_arxiv, automatic=True, i=0):
     bib_id = bib_arxiv["ID"]
 
     arxiv_id = bib_arxiv["journal"].partition(":")[2]
@@ -32,13 +33,16 @@ def update_bib(bib_arxiv, automatic=True):
             if replace == "y":
                 bib = bib.entries[0]
 
+        bib["ID"] = bib_id
     else:
         print("'{}' not founded with a id {}".format(
             arxiv_title,
             arxiv_id
         ))
+        bib = bib_arxiv
 
-    bib["ID"] = bib_id
+    for i in bib.keys():
+        print(type(bib[i]))
     return bib
 
 
@@ -53,5 +57,6 @@ def update_bibs_arxiv(bibs):
         for i, bib in enumerate(bibs):
             if "journal" in bib:
                 if "arxiv" in bib["journal"].lower():
-                    bibs[i] = update_bib(bib, automatic)
+                    bib_updated = update_bib(bib, automatic, i)
+                    bibs[i] = bib_updated
     return bibs
