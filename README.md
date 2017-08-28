@@ -10,7 +10,7 @@ Bibcure uses the wonderful [Bibtex parser](https://github.com/sciunto-org/python
 # Install
 
 ```
-$ sudo pip install bibcure
+$ sudo python /usr/bin/pip install bibcure
 ```
 
 
