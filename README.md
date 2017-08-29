@@ -3,6 +3,8 @@
 
 ![](https://raw.githubusercontent.com/bibcure/logo/master/logo_64x64.png)  Bibcure helps in boring tasks by keeping your bibfile up to date and normalized.
 
+![](https://raw.githubusercontent.com/bibcure/logo/master/gifs/bibcure_op.gif) 
+
 ##  Requirements
 
 Bibcure uses the wonderful [Bibtex parser](https://github.com/sciunto-org/python-bibtexparser). In this moment we waiting for new release of bibtexparser to solve some bugs.
