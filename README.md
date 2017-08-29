@@ -1,15 +1,13 @@
-# Description(Beta version)
-
+# Beta Version
 
 ![](https://raw.githubusercontent.com/bibcure/logo/master/logo_64x64.png)  Bibcure helps in boring tasks by keeping your bibfile up to date and normalized.
 
 ![](https://raw.githubusercontent.com/bibcure/logo/master/gifs/bibcure_op.gif) 
 
-##  Requirements
+# Requirements/Install
 
 Bibcure uses the wonderful [Bibtex parser](https://github.com/sciunto-org/python-bibtexparser). In this moment we waiting for new release of bibtexparser to solve some bugs.
 
-# Install
 
 ```
 $ sudo python /usr/bin/pip install bibcure
@@ -17,8 +15,8 @@ $ sudo python /usr/bin/pip install bibcure
 
 
 ## scihub2pdf(beta)
-![](https://raw.githubusercontent.com/bibcure/logo/master/sci_hub_64.png)   If you want download articles via a DOI number, article title or a bibtex file, using the
-database of libgen or sci-hub, see
+![](https://raw.githubusercontent.com/bibcure/logo/master/sci_hub_64.png)  If you want download articles via a DOI number, article title or a bibtex file, using the
+database of arxiv, libgen or sci-hub, see
 
 [bibcure/scihub2pdf](https://github.com/bibcure/scihub2pdf)
 
@@ -75,7 +73,7 @@ $ arxivcheck --ask --title An useful paper published on arxiv
 ```
 
 
-# scihub2pdf
+## scihub2pdf
 
 Given a bibtex file
 
