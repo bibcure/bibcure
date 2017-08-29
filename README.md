@@ -44,6 +44,82 @@ internet connection)
 
 * abbreviate jorunals names
 
+
+## arxivcheck
+
+Given a arxiv id...
+
+```
+$ arxivcheck 1601.02785
+```
+
+* check if has been published, and then returns the updated bib (requires internet connection)
+
+Given a title...
+
+```
+$ arxivcheck --title An useful paper published on arxiv
+```
+
+search papers related and return a bib the first item. 
+You can easily append a bib into a bibfile, just do
+
+```
+$ arxivcheck --title An useful paper published on arxiv >> file.bib
+```
+
+You also can interact with results, just pass --ask parameter
+
+```
+$ arxivcheck --ask --title An useful paper published on arxiv 
+```
+
+
+# scihub2pdf
+
+Given a bibtex file
+
+```
+$ scihub2pdf -i input.bib 
+```
+
+Given a DOI number...
+
+```
+$ scihub2pdf 10.1038/s41524-017-0032-0
+```
+
+Given arxivId...
+
+```
+$ scihub2pdf arxiv:1708.06891
+```
+
+Given a title...
+
+```
+$ scihub2bib --title An useful paper
+```
+
+or arxiv...
+
+```
+$ scihub2bib --title arxiv:An useful paper
+```
+
+Location folder as argument
+
+```
+$ scihub2pdf -i input.bib -l somefoler/
+```
+
+Use libgen instead sci-hub
+
+```
+$ scihub2pdf -i input.bib --uselibgen
+```
+
+
 ## doi2bib
 
 Given a DOI number...
@@ -92,66 +168,7 @@ You also can generate a bibtex from a txt file containing a list of "titles"
 $ title2bib --input file_with_titles.txt --output refs.bib --first
 ```
 
-## arxivcheck
 
-Given a arxiv id...
-
-```
-$ arxivcheck 1601.02785
-```
-
-* check if has been published, and then returns the updated bib (requires internet connection)
-
-Given a title...
-
-```
-$ arxivcheck --title An useful paper published on arxiv
-```
-
-search papers related and return a bib the first item. 
-You can easily append a bib into a bibfile, just do
-
-```
-$ arxivcheck --title An useful paper published on arxiv >> file.bib
-```
-
-You also can interact with results, just pass --ask parameter
-
-```
-$ arxivcheck --ask --title An useful paper published on arxiv 
-```
-
-# scihub2pdf
-
-Given a bibtex file
-
-```
-$ scihub2pdf -i input.bib 
-```
-
-Given a DOI number...
-
-```
-$ scihub2pdf 10.1038/s41524-017-0032-0
-```
-
-Given a title...
-
-```
-$ scihub2bib --title An useful paper
-```
-
-Location folder as argument
-
-```
-$ scihub2pdf -i input.bib -l somefoler/
-```
-
-Use libgen instead sci-hub
-
-```
-$ scihub2pdf -i input.bib --uselibgen
-```
 
 ## Sci-Hub vs LibGen
 
