@@ -43,7 +43,7 @@ def update_bibs_in(grouped_bibs, db_abbrev):
         "n": lambda items: items
     }
     print("\n ")
-    action = input("Abbreviate everthing?" +
+    action = input("Abbreviate everything?" +
                    "y(yes, automatic)/m(manual)/n(do nothing)")
     grouped_bibs.sort(key=operator.itemgetter('journal'))
     grouped_by_journal = []
