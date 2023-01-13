@@ -1,0 +1,32 @@
+# See https://pre-commit.com for more information
+# See https://pre-commit.com/hooks.html for more hooks
+repos:
+  - repo: https://github.com/psf/black
+    rev: 22.3.0 # Replace by any tag/version: https://github.com/psf/black/tags
+    hooks:
+      - id: black
+        language_version: python3 # Should be a command that runs python3.6+
+  - repo: https://github.com/pre-commit/pre-commit-hooks
+    rev: v4.2.0
+    hooks:
+      - id: end-of-file-fixer
+      - id: trailing-whitespace
+      - id: destroyed-symlinks
+  - repo: https://github.com/pre-commit/pre-commit-hooks
+    rev: v4.3.0
+    hooks:
+    -   id: trailing-whitespace
+    -   id: check-yaml
+    -   id: check-json
+    -   id: check-symlinks
+    -   id: check-added-large-files
+    -   id: debug-statements
+    -   id: pretty-format-json
+        args: [--autofix]
+  # to be enabled later
+  #- repo: https://github.com/charliermarsh/ruff-pre-commit
+  #rev: 'v0.0.219'
+  #hooks:
+  #- id: ruff
+  ## Respect `exclude` and `extend-exclude` settings.
+  #args: ["--force-exclude", "--fix"]
